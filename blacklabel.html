@@ -5,53 +5,98 @@
 </head>
 
 <div class="sheet-container">
-        <div class="sheet-break"></div>
-        <div class="sheet-section-id-logo sheet-section">
-            <img class="sheet-logo" src="./images/Powered-by-Fate.png" alt="FATE CORE" />
+    <!--MECHANICS SECTION: 
+        1. Add mechanics (HP, Speed, Shield (ft and ti), BP)
+        2. Find a way to connect the stats to the token
+    -->
+
+        <div class="sheet-section-mechanics sheet-section sheet-quarter">
+
+            <div class="sheet-row" style="padding-left: 5px;">
+
+                <div class="mechanics-container">
+
+                    <img src="hp.png" alt="hp" style="width:150px; height: 150px;">
+
+                    <input type="number" name="attr_hp" value="0"/>
+
+                    <div class="circle">
+                        <input type="number" name="attr_hp" value="0"/>
+                    </div>
+
+                <div class="mechanics-container">
+
+                    <img src="shield.png" alt="shield" style="width:150px; height: 150px">
+
+                    <input type="number" name="attr_hp" value="0" style="left: 59px"/>
+
+                    <div class="circle">
+                        <input type="number" name="attr_hp" value="0"/>
+                    </div>
+
+                </div>
+
+                <div class="mechanics-container" >
+
+                    <img src="bp.png" alt="bp" style="width:150px; height: 150px;">
+
+                    <input type="number" name="attr_hp" value="0"/>
+
+                    <div class="circle">
+                        <input type="number" name="attr_hp" value="0"/>
+                    </div>
+                </div>
+            
+            </div>
+
         </div>
 
-        <div class="sheet-section-id sheet-section">
+    </div>
+
+    <!--ID SECTION: DONE -->
+        <div class="sheet-section-id sheet-section three-quarters">
+            
             <div class="sheet-header">
                 <span>ID</span>
             </div>
-            <input class="sheet-fatepoints-flag sheet-hidden" type="checkbox" name="attr_show_fatepoints_flag" value="1" checked />
+            <input class="sheet-level-flag sheet-hidden" type="checkbox" name="attr_show_fatepoints_flag" value="1" checked />
             <div class="sheet-section sheet-section-id-info">
                 <div class="sheet-repitem">
                     <input type="text" name="attr_character_name" placeholder="Name" />
+                </div>
+
+                <div class="sheet-row">
+                    <input type="text" name="attr_character_past" placeholder="Past" style="width:45%"/>
+                    <input type="text" name="attr_character_discipline" placeholder="Discipline" style="width:50%"/>
                 </div>
                 
                 <div class="sheet-repitem">
                     <textarea name="attr_character_description" placeholder="Description"></textarea>
                 </div>
             </div>
-            <div class="sheet-section sheet-section-id-fatepoints">
+
+            <div class="sheet-section sheet-section-id-level">
                 <div class="sheet-repitem">
-                    <button type="roll" class="sheet-small-button" name="roll_fatePointsRefreshRoll" value="&{template:refresh} @{rollTemplate_showCharName} {{refresh=@{fatePoints_refresh}}} {{fatePoints=@{fatepoints}}} {{pointsNeeded=[[@{fatePoints_refresh}-@{fatepoints}]]}} @{rollTemplate_showInfo}">Refresh</button>
-                    <input type="number" name="attr_fatePoints_refresh" placeholder="0" />
-                </div>
-                <div class="sheet-repitem">
-                    <button type="roll" class="sheet-small-button" name="roll_fatePointsRoll" value="&{template:fatepoints} @{rollTemplate_showCharName} {{fatePoints=@{fatepoints}}} @{rollTemplate_showInfo}">Fate Points</button>
-                    <input type="number" name="attr_fatepoints" placeholder="0" class="sheet-large-number" />
+                    <label style="font-size: smaller;">Level</label>
+                    <input type="number" name="attr_level_refresh" placeholder="0" />
                 </div>
             </div>
         </div>
-
-        <div class="sheet-break"></div>
 
      <!--SKILLS SECTION: 
         1. Add role dice for each skill (same dice, different modifiers)
         2. Add advantage/disadvantage
     -->
-        <div class="sheet-section-skills sheet-section">
+        <div class="sheet-section-skills sheet-section sheet-half">
             <div class="sheet-header">
                 <span>Stats and Skills</span>
             </div>
 
-            <div class="sheet-row">
+            <div class="sheet-row" style="padding-top:10px">
 
                 <div class="sheet-col">
                         
-                    <div class="stat-header" style="padding-left: 45px; padding-top: 10px;">
+                    <div class="stat-header" style="padding-left: 45px">
                         <label>Body (<input type="number" name="stat_body" value="0"/>)</label>
                     </div>
 
@@ -67,11 +112,12 @@
                         <input type="number" name="skill_vig" value="0" />
 
                     </div>
+
                 </div>
 
-                <div class="sheet-col col-wrap">
+                <div class="sheet-col">
 
-                    <div class="stat-header" style="padding-left: 20px; padding-top: 10px;">
+                    <div class="stat-header" style="padding-left: 25px">
                         <label>Technique (<input type="number" name="stat_tech" value="0"/>)</label>
                     </div>
 
@@ -86,9 +132,9 @@
 
                 </div>
 
-                <div class="sheet-col col-wrap">
+                <div class="sheet-col">
 
-                    <div class="stat-header" style="padding-left: 30px; padding-top: 10px;"">
+                    <div class="stat-header" style="padding-left: 30px">
                         <label>Presence (<input type="number" name="stat_pres" value="0" />)</label>
                     </div>
 
@@ -105,7 +151,7 @@
 
                 <div class="sheet-col col-wrap">
 
-                    <div class="stat-header" style="padding-left: 45px; padding-top: 10px;"">
+                    <div class="stat-header" style="padding-left: 45px">
                         <label>Mind (<input type="number" name="stat_mind" value="0"/>)</label>
                     </div>
                     
@@ -122,6 +168,16 @@
 
             </div>
     
+        </div>
+
+    <!--MECHANICS 2 SECTION: 
+        1. Add speed (ft and time), proficiency
+        2. Maybe actions, bonus and movement
+    -->
+        <div class="sheet-section-mechanics2 sheet-section sheet-quarter">
+            <div class="sheet-header">
+                <span>ID</span>
+            </div>
         </div>
 
         <div class="sheet-break"></div>
@@ -222,7 +278,10 @@
 
         <div class="sheet-break"></div>
 
-    <!--STRESS SECTION: DONE-->
+    <!--STRESS SECTION: 
+        1. Make it so that stress and sanity are default to 4 and does not show up as the edit view in default
+        2. Make Enlightenment a simple input scroller 
+    -->
         <div class="sheet-section-stress sheet-section sheet-half">
             <div class="sheet-header">
                 <span>Status</span>
@@ -272,9 +331,7 @@
             </fieldset>
         </div>
 
-    <!--CONDITIONS SECTION: 
-        1. Get rid of unnecessary rolls 
-    -->
+    <!--CONDITIONS SECTION: DONE-->
         <input class="sheet-conditions-flag sheet-hidden" type="checkbox" name="attr_show_conditions_flag" value="1" />
 
         <div class="sheet-section-consequences sheet-section sheet-half">
@@ -385,6 +442,8 @@
         1. Add 4 different currencies
         2. Repeatable items (qty, name, description)
     -->
+
+
     
     <!--WEAPONS SECTION:
         1. Primary and Secondary weapons (name, trait/range, type, feature, damage dice)
@@ -393,9 +452,10 @@
 
     <!--NOTES SECTION:
         1. Make a part of the sheet instead of an individual tab
-    -->
+   
         <input class="sheet-notesTab-flag sheet-hidden" type="checkbox" name="attr_show_notesTab_flag" value="1" />
-
+ -->
+        <!--
         <div class="sheet-section-notes sheet-section">
             <div class="sheet-header">
                 <span>NOTES</span>
@@ -486,8 +546,9 @@
     </div>
 
 </div>
+-->
 
-<!--BONUS ROLL SECTION: DONE-->
+<!--BONUS ROLL SECTION: DONE
 <rolltemplate class="sheet-rolltemplate-bonuses">
     <div class="sheet-rollTemplate">
         <div class="row sheet-header">
@@ -500,8 +561,9 @@
         </div>
     </div>
 </rolltemplate>
+-->
 
-<!--KEYWORD ROLL SECTION: DONE-->
+<!--KEYWORD ROLL SECTION: DONE
 <rolltemplate class="sheet-rolltemplate-keywords">
     <div class="sheet-rollTemplate">
         <div class="row sheet-header">
@@ -519,11 +581,12 @@
         </div>
     </div>
 </rolltemplate>
+-->
 
 <!--SKILL ROLL SECTION:
     1. Make 2 similar columns to emulate advantage/disadvantage
     2. Implement rolls + modifier
--->
+
 <rolltemplate class="sheet-rolltemplate-skill">
     <div class="sheet-rollTemplate">
         <div class="row sheet-header">
@@ -543,6 +606,7 @@
         </div>
     </div>
 </rolltemplate>
+-->
     
 <script type="text/worker">
     on('sheet:opened', function () {

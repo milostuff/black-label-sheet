@@ -85,7 +85,7 @@ div.sheet-tab-content {
 }
 
 /* === GENERAL === */
-.sheet-rolltemplate-fatepoints .sheet-header,
+.sheet-rolltemplate-level .sheet-header,
 .sheet-rolltemplate-refresh .sheet-header,
 .sheet-rolltemplate-aspect .sheet-header,
 .sheet-rolltemplate-skill .sheet-header,
@@ -103,7 +103,7 @@ div.sheet-tab-content {
 }
 
 .sheet-inlineLabel,
-.sheet-rolltemplate-fatepoints .sheet-inlineLabel,
+.sheet-rolltemplate-level .sheet-inlineLabel,
 .sheet-rolltemplate-refresh .sheet-inlineLabel,
 .sheet-rolltemplate-aspect .sheet-inlineLabel,
 .sheet-rolltemplate-skill .sheet-inlineLabel,
@@ -425,6 +425,46 @@ button[type=roll]:hover,
     margin-top: 2px;
 }
 
+/* === STATS AND SKILLS === */
+.sheet-section-mechanics input[type=number]{
+    height: 40px;
+    width: 20%;
+    text-align: center;
+    font-size: large;
+}
+
+
+.mechanics-container{
+    border-style: transparent;
+    position: relative;
+}
+
+.mechanics-container input[type="number"]{
+    position: absolute; 
+    top: 65px;
+    left: 55px;
+    width: 40px;
+}
+
+.circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+    border-style: solid;
+    position: absolute;
+    top: 95px;
+    left: 90px
+}
+.circle input[type="number"]{
+    font-size: smaller;
+    border: none;
+    background: none;
+    position: absolute; 
+    left: 2px;
+    top: -5px;
+}
+
 /* === Id === */
 .sheet-section-id {
     width: calc(100% - 215px);
@@ -449,22 +489,22 @@ button[type=roll]:hover,
     max-width: 100%;
 }
 
-.sheet-section-id-fatepoints {
+.sheet-section-id-level {
     display: none;
     max-width: 65px;
     float: right;
 }
 
-.sheet-section-id-fatepoints input {
+.sheet-section-id-level input {
     width: 100% !important;
     text-align: center;
 }
 
-.sheet-fatepoints-flag:checked ~ .sheet-section-id-info {
+.sheet-level-flag:checked ~ .sheet-section-id-info {
     max-width: calc(100% - 75px);
 }
 
-.sheet-fatepoints-flag:checked ~ .sheet-section-id-fatepoints {
+.sheet-level-flag:checked ~ .sheet-section-id-level {
     display: block;
 }
 
@@ -483,8 +523,9 @@ button[type=roll]:hover,
 
 /* === STATS AND SKILLS === */
 .stat-header label{
-    font-size: large; 
+    font-size: medium; 
     font-weight: bold;
+    
 }
 
 .stat-header input[type=number]{
@@ -505,7 +546,7 @@ input[type=number]::-webkit-outer-spin-button{
 .container-skill {
     display: grid;
     grid-template-columns: 100px 1fr;
-    gap: 7px 5px;
+    gap: 2px 1px;
     max-width: 400px;
     padding: 10px;
 }
@@ -755,7 +796,7 @@ span.sheet-consequence-healing {
 }
 
 /* === ROLL TEMPLATE === */
-.sheet-rolltemplate-fatepoints .sheet-rollTemplate,
+.sheet-rolltemplate-level .sheet-rollTemplate,
 .sheet-rolltemplate-refresh .sheet-rollTemplate,
 .sheet-rolltemplate-aspect .sheet-rollTemplate,
 .sheet-rolltemplate-skill .sheet-rollTemplate,
@@ -765,7 +806,7 @@ span.sheet-consequence-healing {
     position: relative;
 }
 
-.sheet-rolltemplate-fatepoints .sheet-rollTemplate .sheet-header,
+.sheet-rolltemplate-level .sheet-rollTemplate .sheet-header,
 .sheet-rolltemplate-refresh .sheet-rollTemplate .sheet-header,
 .sheet-rolltemplate-aspect .sheet-rollTemplate .sheet-header,
 .sheet-rolltemplate-skill .sheet-rollTemplate .sheet-header,
@@ -775,7 +816,7 @@ span.sheet-consequence-healing {
     margin-top: 5px;
 }
 
-.sheet-rolltemplate-fatepoints .sheet-fate-point-circle,
+.sheet-rolltemplate-level .sheet-fate-point-circle,
 .sheet-rolltemplate-refresh .sheet-fate-point-circle,
 .sheet-rolltemplate-aspect .sheet-fate-point-circle,
 .sheet-rolltemplate-skill .sheet-fate-point-circle,
@@ -793,7 +834,7 @@ span.sheet-consequence-healing {
     background-color: gold;
 }
 
-.sheet-rolltemplate-fatepoints .sheet-fate-point-circle span,
+.sheet-rolltemplate-level .sheet-fate-point-circle span,
 .sheet-rolltemplate-refresh .sheet-fate-point-circle span,
 .sheet-rolltemplate-aspect .sheet-bonus-circle span,
 .sheet-rolltemplate-skill .sheet-fate-point-circle span,
@@ -804,7 +845,7 @@ span.sheet-consequence-healing {
     line-height: 30px;
 }
 
-.sheet-rolltemplate-fatepoints .sheet-fate-point-circle + .sheet-header,
+.sheet-rolltemplate-level .sheet-fate-point-circle + .sheet-header,
 .sheet-rolltemplate-refresh .sheet-fate-point-circle + .sheet-header,
 .sheet-rolltemplate-aspect .sheet-fate-point-circle + .sheet-header,
 .sheet-rolltemplate-skill .sheet-fate-point-circle + .sheet-header,
@@ -814,7 +855,7 @@ span.sheet-consequence-healing {
     margin-top: 16px;
 }
 
-.sheet-rolltemplate-fatepoints .sheet-uppercase,
+.sheet-rolltemplate-level .sheet-uppercase,
 .sheet-rolltemplate-refresh .sheet-uppercase,
 .sheet-rolltemplate-aspect .sheet-uppercase,
 .sheet-rolltemplate-skill .sheet-uppercase,
@@ -824,7 +865,7 @@ span.sheet-consequence-healing {
     text-transform: uppercase;
 }
 
-.sheet-rolltemplate-fatepoints .sheet-warning,
+.sheet-rolltemplate-level .sheet-warning,
 .sheet-rolltemplate-refresh .sheet-warning,
 .sheet-rolltemplate-aspect .sheet-warning,
 .sheet-rolltemplate-skill .sheet-warning,
@@ -834,7 +875,7 @@ span.sheet-consequence-healing {
     color: red;
 }
 
-.sheet-rolltemplate-fatepoints .sheet-warning::before,
+.sheet-rolltemplate-level .sheet-warning::before,
 .sheet-rolltemplate-refresh .sheet-warning::before,
 .sheet-rolltemplate-aspect .sheet-warning::before,
 .sheet-rolltemplate-skill .sheet-warning::before,
