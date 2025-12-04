@@ -1,6 +1,9 @@
 .sheet-container {
     position: relative;
-    background-image: url();
+    background-image: url(https://raw.github.com/milostuff/black-label-sheet/main/doodles.png), 
+    url(https://raw.github.com/milostuff/black-label-sheet/main/paper.jpg);
+    background-size: contain;
+    border: solid 5px
 }
 
 /*===Tabs===*/
@@ -426,7 +429,7 @@ button[type=roll]:hover,
     margin-top: 2px;
 }
 
-/* === STATS AND SKILLS === */
+/* === MECHANICS === */
 .sheet-section-mechanics input[type=number]{
     height: 40px;
     width: 20%;
@@ -515,14 +518,16 @@ button[type=roll]:hover,
     gap: 15px; /* Increased gap for more breathing room */
     margin-bottom: 15px;
 }
+
 .sheet-col {
     flex: 1;
-    min-width: 180px; /* Adjusted for slightly larger inputs */
+    min-width: 150px; /* Adjusted for slightly larger inputs */
     display: flex;
     flex-direction: column;
 }
 
 /* === STATS AND SKILLS === */
+
 .stat-header label{
     font-size: medium; 
     font-weight: bold;
@@ -548,7 +553,7 @@ input[type=number]::-webkit-outer-spin-button{
     display: grid;
     grid-template-columns: 100px 1fr;
     gap: 2px 1px;
-    max-width: 400px;
+    max-width: 100px;
     padding: 10px;
 }
 
