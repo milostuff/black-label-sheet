@@ -59,26 +59,26 @@
                 <span>ID</span>
             </div>
 
-            <input class="sheet-level-flag sheet-hidden" type="checkbox" name="attr_show_fatepoints_flag" value="1" checked />
+            <input class="sheet-level-flag sheet-hidden" type="checkbox" name="attr_show_level_flag" value="1" checked />
             <div class="sheet-section sheet-section-id-info">
                 <div class="sheet-repitem">
-                    <input type="text" name="attr_character_name" placeholder="Name" />
+                    <input type="text" name="attr_id_name" placeholder="Name" />
                 </div>
 
                 <div class="sheet-row">
-                    <input type="text" name="attr_character_past" placeholder="Past" style="width:45%"/>
-                    <input type="text" name="attr_character_discipline" placeholder="Discipline" style="width:50%"/>
+                    <input type="text" name="attr_id_past" placeholder="Past" style="width:45%"/>
+                    <input type="text" name="attr_id_discipline" placeholder="Discipline" style="width:50%"/>
                 </div>
                 
                 <div class="sheet-repitem">
-                    <textarea name="attr_character_description" placeholder="Description"></textarea>
+                    <textarea name="attr_id_description" placeholder="Description"></textarea>
                 </div>
             </div>
 
             <div class="sheet-section sheet-section-id-level">
                 <div class="sheet-repitem">
                     <label style="font-size: smaller;">Level</label>
-                    <input type="number" name="attr_level_refresh" placeholder="0" />
+                    <input type="number" name="attr_id_level" placeholder="0" />
                 </div>
             </div>
         </div>
@@ -98,19 +98,19 @@
                 <div class="sheet-col">
                         
                     <div class="stat-header" style="padding-left: 45px">
-                        <label>Body (<input type="number" name="stat_body" value="0"/>)</label>
+                        <label>Body (<input type="number" name="attr_stat_body" value="0"/>)</label>
                     </div>
 
                     <div class="container-skill">
                             
-                        <button type="roll" class="sheet-action-button" name="roll_ladder" value="&{template:skill} @{rollTemplate_showCharName}  {{shiftLevelText=Strength}} {{skill=@{ladderRollLabel}}} {{skillRoll=[[2df + 8]]}}">
+                        <button type="roll" class="sheet-action-button" name="roll_strength" value="&{template:skill} {{name= Strength}} {{boon= [[1d12+@{skill_str}[skill_str]]]}} {{dread= [[1d12+@{skill_str}[skill_str]]]}}">
                             <span>Strength</span>
                         </button>
-                        <input type="number" name="skill_str" value="0" />
+                        <input type="number" name="attr_skill_str" value="0" />
                         <label>Will</label>
-                        <input type="number" name="skill_wil" value="0" />
+                        <input type="number" name="attr_skill_wil" value="0" />
                         <label>Vigor</label>
-                        <input type="number" name="skill_vig" value="0" />
+                        <input type="number" name="attr_skill_vig" value="0" />
 
                     </div>
 
@@ -119,16 +119,16 @@
                 <div class="sheet-col">
 
                     <div class="stat-header" style="padding-left: 25px">
-                        <label>Technique (<input type="number" name="stat_tech" value="0"/>)</label>
+                        <label>Technique (<input type="number" name="attr_stat_tech" value="0"/>)</label>
                     </div>
 
                     <div class="container-skill">
                         <label>Acrobratics</label>
-                        <input type="number" name="skill_acr" value="0" />
+                        <input type="number" name="attr_skill_acr" value="0" />
                         <label>Finesse</label>
-                        <input type="number" name="skill_fin" value="0" />
+                        <input type="number" name="attr_skill_fin" value="0" />
                         <label>Control</label>
-                        <input type="number" name="skill_cont" value="0" />
+                        <input type="number" name="attr_skill_cont" value="0" />
                     </div>
 
                 </div>
@@ -136,34 +136,34 @@
                 <div class="sheet-col">
 
                     <div class="stat-header" style="padding-left: 30px">
-                        <label>Presence (<input type="number" name="stat_pres" value="0" />)</label>
+                        <label>Presence (<input type="number" name="attr_stat_pres" value="0" />)</label>
                     </div>
 
                     <div class="container-skill">
                         
                         <label>Rapport</label>
-                        <input type="number" name="skill_rap" value="0" />
+                        <input type="number" name="attr_skill_rap" value="0" />
                         <label>Menace</label>
-                        <input type="number" name="skill_men" value="0" />
+                        <input type="number" name="attr_skill_men" value="0" />
                         <label>Convince</label>
-                        <input type="number" name="skill_con" value="0" />
+                        <input type="number" name="attr_skill_con" value="0" />
                     </div>
                 </div>
 
                 <div class="sheet-col col-wrap">
 
                     <div class="stat-header" style="padding-left: 45px">
-                        <label>Mind (<input type="number" name="stat_mind" value="0"/>)</label>
+                        <label>Mind (<input type="number" name="attr_stat_mind" value="0"/>)</label>
                     </div>
                     
                     <div class="container-skill">
 
                         <label>Empathy</label>
-                        <input type="number" name="skill_emp" value="0" />
+                        <input type="number" name="attr_skill_emp" value="0" />
                         <label>Lore</label>
-                        <input type="number" name="skill_lore" value="0" />
+                        <input type="number" name="attr_skill_lore" value="0" />
                         <label>Insight</label>
-                        <input type="number" name="skill_ins" value="0" />
+                        <input type="number" name="attr_skill_ins" value="0" />
                     </div>
                 </div>
 
@@ -172,7 +172,7 @@
         </div>
 
     <!--MECHANICS 2 SECTION: 
-        1. Speed, proficiency, what else?
+        1. Speed, proficiency, what else? currency?
     -->
 
         <div class="sheet-section-mechanics2 sheet-section sheet-quarter">
@@ -182,6 +182,8 @@
         </div>
 
         <div class="sheet-break"></div>
+
+        
 
     <!--BONUSES SECTION: DONE-->
         <div class="sheet-section-bonuses sheet-section sheet-half">
@@ -200,25 +202,25 @@
                 </div>
                 <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
                 <div class="sheet-options">
-                    <input type="text" name="attr_bonusname" placeholder="Name" />
-                    <textarea name="attr_bonusdesc" placeholder="Description"></textarea>
+                    <input type="text" name="attr_bonus_name" placeholder="Name" />
+                    <textarea name="attr_bonus_desc" placeholder="Description"></textarea>
                 </div>
                 <div class="sheet-display">
                     <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_more_flag" checked="checked" />
                     <div class="sheet-display">
                         <h3 class="sheet-right-buttons">
-                            <button type="roll" class="sheet-action-button" name="roll_bonuses" value="&{template:bonuses} {{bonuses=@{bonusname}}} {{description=@{bonusdesc}}}">
-                                <span name="attr_bonusname"></span>
+                            <button type="roll" class="sheet-action-button" name="roll_bonuses" value="&{template:bonuses} {{bonuses=@{bonus_name}}} {{description=@{bonus_desc}}}">
+                                <span name="attr_bonus_name"></span>
                             </button>
                         </h3>
                         
-                        <span name="attr_bonusdesc" class="sheet-keep-whitespace"> </span>
+                        <span name="attr_bonus_desc" class="sheet-keep-whitespace"> </span>
                     </div>
                     <div class="sheet-options">
                         <h3 class="sheet-right-buttons">
-                            <button type="roll" class="sheet-action-button sheet-tooltip" name="roll_bonuses" value="&{template:bonuses} {{bonuses=@{bonusname}}} {{description=@{bonusdesc}}}">
-                                <span name="attr_bonusname"></span>
-                                <span name="attr_bonusdesc" class="sheet-tooltipText sheet-keep-whitespace"></span>
+                            <button type="roll" class="sheet-action-button sheet-tooltip" name="roll_bonuses" value="&{template:bonuses} {{bonuses=@{bonus_name}}} {{description=@{bonus_desc}}}">
+                                <span name="attr_bonus_name"></span>
+                                <span name="attr_bonus_desc" class="sheet-tooltipText sheet-keep-whitespace"></span>
                             </button>
                         </h3>
                     </div>
@@ -243,33 +245,33 @@
                 </div>
                 <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
                 <div class="sheet-options">
-                    <input type="text" name="attr_keyname" placeholder="Name" />
-                    <input type="text" name="attr_keysource" placeholder="Source" />
-                    <textarea name="attr_keydesc" placeholder="Description"></textarea>
+                    <input type="text" name="attr_key_name" placeholder="Name" />
+                    <input type="text" name="attr_key_source" placeholder="Source" />
+                    <textarea name="attr_key_desc" placeholder="Description"></textarea>
                 </div>
                 <div class="sheet-display">
                     <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_more_flag" checked="checked" />
                     <div class="sheet-display">
                         <h3 class="sheet-right-buttons">
-                            <button type="roll" class="sheet-action-button" name="roll_keywords" value="&{template:keywords} {{keyword=@{keyname}}} {{source=@{keysource}}} {{description=@{keydesc}}}">
-                                <span name="attr_keyname"></span>
+                            <button type="roll" class="sheet-action-button" name="roll_keywords" value="&{template:keywords} {{keyword=@{key_name}}} {{source=@{key_source}}} {{description=@{key_desc}}}">
+                                <span name="attr_key_name"></span>
                             </button>
                         </h3>
 
                         <div class="row">
                             <span class="sheet-inlineLabel">Source</span>
                             <span class="sheet-inlineLabel">: </span>
-                            <span name="attr_keysource"></span>
+                            <span name="attr_key_source"></span>
                         </div>   
                         
-                        <span name="attr_keydesc" class="sheet-keep-whitespace"> </span>
+                        <span name="attr_key_desc" class="sheet-keep-whitespace"> </span>
                     </div>
                     <div class="sheet-options">
                         <h3 class="sheet-right-buttons">
-                            <button type="roll" class="sheet-action-button sheet-tooltip" name="roll_keywords" value="&{template:keywords} {{keyword=@{keyname}}} {{source=@{keysource}}} {{description=@{keydesc}}}">
-                                <span name="attr_keyname"></span>
-                                <span name="attr_keysource"></span>
-                                <span name="attr_keydesc" class="sheet-tooltipText sheet-keep-whitespace"></span>
+                            <button type="roll" class="sheet-action-button sheet-tooltip" name="roll_keywords" value="&{template:keywords} {{keyword=@{key_name}}} {{source=@{key_source}}} {{description=@{key_desc}}}">
+                                <span name="attr_key_name"></span>
+                                <span name="attr_key_source"></span>
+                                <span name="attr_key_desc" class="sheet-tooltipText sheet-keep-whitespace"></span>
                             </button>
                         </h3>
                     </div>
@@ -280,9 +282,10 @@
         <div class="sheet-break"></div>
 
     <!--STRESS SECTION: 
-        1. Make it so that stress and sanity are default to 4 and does not show up as the edit view in default
-        2. Make Enlightenment a simple input scroller 
+        1. Make it so that stress and sanity are default to 4 and does not show up as the edit view in default 
     -->
+        <input class="sheet-stress-flag sheet-hidden" type="checkbox" name="attr_show_stress_flag" value="1" />
+
         <div class="sheet-section-stress sheet-section sheet-half">
             <div class="sheet-header">
                 <span>Status</span>
@@ -295,7 +298,7 @@
             <fieldset class="repeating_stress">
                 <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
                 <div class="sheet-options">
-                    <input type="text" name="attr_name" placeholder="Name" />
+                    <input type="text" name="attr_stress_name" placeholder="Name" />
                     <select name="attr_usable">
                         <option value=1>1</option>
                         <option value=2>2</option>
@@ -332,7 +335,9 @@
             </fieldset>
         </div>
 
-    <!--CONDITIONS SECTION: DONE-->
+    <!--CONDITIONS SECTION: 
+        1. Don't change the naming convention you dont want to deal with the edits
+    -->
         <input class="sheet-conditions-flag sheet-hidden" type="checkbox" name="attr_show_conditions_flag" value="1" />
 
         <div class="sheet-section-consequences sheet-section sheet-half">
@@ -363,104 +368,144 @@
                             <span class="sheet-worth-value" name="attr_worth"></span>
                             <span class="sheet-worth-text" name="attr_worth_text"></span>
                     </div>
-                    <input type="text" name="attr_aspect" class="sheet-consequence-aspect" />/>
+                    <input type="text" name="attr_aspect" class="sheet-consequence-aspect" />
                 </div>
             </fieldset>
         </div>
-        <div class="sheet-section-conditions sheet-section sheet-half">
-            <div class="sheet-header">
-                <span>Conditions</span>
-                <div class="sheet-section-options">
-                    <input class="sheet-section-options-flag" type="checkbox" name="attr_consequences_options_flag" checked="checked" />
-                    <span>p</span>
-                </div>
-            </div>
-            <div class="sheet-repitem sheet-conditions-row">
-                <span class="sheet-consequence-worth"></span>
-            </div>
-            <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_consequences_options_flag" checked="checked" />
-            <div class="sheet-options">
-                <fieldset class="repeating_consequences">
-                    <div class="sheet-conditions-row">
-                        <select name="attr_worth">
-                            <option value=1 selected><span>Fleeting</span> (1)</option>
-                            <option value=2><span>Sticky</span> (2)</option>
-                            <option value=4><span>Lasting</span> (4)</option>
-                        </select>
-                        <input type="hidden" name="attr_worth_text" value="Fleeting"/>
-                        <input type="text" name="attr_aspect" placeholder="Aspect" />
-                        <input type="checkbox" name="attr_isUsed" class="sheet-hidden" value="1" />
-                        <input type="checkbox" name="attr_isHealing" class="sheet-hidden" value="1" />
-                    </div>
-                </fieldset>
-            </div>
-            <div class="sheet-display">
-                <div class="sheet-conditions-group1">
-                    <h3><span>Fleeting</span></h3>
-                    <fieldset class="repeating_consequences">
-                        <input type="hidden" name="attr_worth" class="sheet-conditions-filter" />
-                        <input type="hidden" name="attr_worth_text" />
-                        <div class="sheet-conditions-row">
-                            <div class="sheet-consequence-worth">
-                                <span class="sheet-worth-value" name="attr_worth"></span>
-                                <input type="checkbox" name="attr_isUsed" value="1" />
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="sheet-conditions-group2">
-                    <h3><span>Sticky</span></h3>
-                    <fieldset class="repeating_consequences">
-                        <input type="hidden" name="attr_worth" class="sheet-conditions-filter" />
-                        <input type="hidden" name="attr_worth_text" />
-                        <div class="sheet-conditions-row">
-                            <div class="sheet-consequence-worth">
-                                <span class="sheet-worth-value" name="attr_worth"></span>
-                                <input type="checkbox" name="attr_isUsed" value="1" />
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="sheet-conditions-group4">
-                    <h3><span>Lasting</span></h3>
-                    <fieldset class="repeating_consequences">
-                        <input type="hidden" name="attr_worth" class="sheet-conditions-filter" />
-                        <input type="hidden" name="attr_worth_text" />
-                        <div class="sheet-conditions-row">
-                            <div class="sheet-consequence-worth">
-                                <span class="sheet-worth-value" name="attr_worth"></span>
-                                <input type="checkbox" name="attr_isUsed" value="1" />
-                            </div>
-                        </div>
-                    </fieldset>
-                </div>
-            </div>
-        </div>
-
+        
         <div class="sheet-break"></div>
     
-    <!--INVENTORY SECTION:
-        1. Add 4 different currencies
-        2. Repeatable items (qty, name, description)
-    -->
+    <!--INVENTORY SECTION:-->
 
-
+        <div class="sheet-section-inventory sheet-section sheet-quarter">
+            <div class="sheet-header">
+                <span>Inventory and Equipment</span>
+            </div>
+            <fieldset class="repeating_inventory">
+                <input type="number" name="attr_invent_qty" placeholder="Qty" style="width:25%"/>
+                <input type="text" name="attr_invent_name" placeholder="Name" style="width:55%" />
+            </fieldset>
+        </div>
     
     <!--WEAPONS SECTION:
         1. Primary and Secondary weapons (name, trait/range, type, feature, damage dice)
         2. Add rolls to hit and to damage 
+
+        1. Show weapon roll and damage when pressed
+        2. Damage and Bonus does not show up auhhuhuh
+        3. Have an option to set weapon to active/inactive and primary/secondary
+    
     -->
+
+        <input class="sheet-weapons-flag sheet-hidden" type="checkbox" name="attr_show_weapons_flag" value="1" />
+        
+        <div class="sheet-section-weapons sheet-section sheet-threequarters">
+            <div class="sheet-header">
+                <span>Weapons</span>
+            </div>
+            <fieldset class="repeating_weapons">
+                <div class="sheet-item-options">
+                    <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
+                    <div class="sheet-display">
+                        <input class="sheet-item-options-flag2" type="checkbox" name="attr_more_flag" checked="checked" />
+                        <span>E</span>
+                    </div>
+                    <input class="sheet-item-options-flag" type="checkbox" name="attr_options_flag" checked="checked" />
+                    <span>p</span>
+                </div>
+                <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
+                <div class="sheet-options">
+
+                    <div class="row">
+                        <input type="text" name="attr_weapons_name" placeholder="Name" />
+                        <input type="text" name="attr_weapons_trait" placeholder="Trait" />
+                    </div>
+
+                    <input type="text" name="attr_weapons_range" placeholder="Range" />
+                    <input type="text" name="attr_weapons_type" placeholder="Type" />
+
+                    <select name="attr_weapon_damage_die">
+                        <option value="" disabled selected hidden>Damage</option>
+                        <option value="1d4">1d4</option>
+                        <option value="1d6">1d6</option>
+                        <option value="1d8">1d8</option>
+                        <option value="1d10">1d10</option>
+                        <option value="1d12">1d12</option>
+                        <option value="1d20">1d20</option>
+                    </select>
+
+
+                    <span class="sheet-plus-sign">+</span>
+                    
+                    <select name="attr_weapon_damage_bonus">
+                        <option value="" disabled selected hidden>Bonus</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+
+
+                    <textarea name="attr_weapons_feature" placeholder="Feature"></textarea>
+                </div>
+                <div class="sheet-display">
+                    <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_more_flag" checked="checked" />
+                    <div class="sheet-display">
+                        <h3 class="sheet-right-buttons">
+                            <button type="roll" class="sheet-action-button" name="roll_weapons" value="&{template:weapons} {{name=@{weapons_name}}} {{trait=@{weapons_trait}}} {{range=@{weapons_range}}} {{damage=@{weapons_damage_die_text}}} {{bonus=@{weapons_damage_bonus_text}}} {{feature=@{weapons_feature}}}">
+                                <span name="attr_weapons_name"></span>
+                            </button>
+                        </h3>
+
+                        <div class="row">
+                            <span name="attr_weapons_trait"></span>
+                            <span name="attr_weapons_range"></span>
+                            <span name="attr_weapons_type"></span>
+                        </div>   
+
+                        <span name="attr_weapons_damage_die_text"></span>
+                        <span name="attr_weapons_damage_bonus_text"></span>
+                        
+                        <span name="attr_weapons_feature" class="sheet-keep-whitespace"> </span>
+                    </div>
+                    <div class="sheet-options">
+                        <h3 class="sheet-right-buttons">
+                            <button type="roll" class="sheet-action-button sheet-tooltip" name="roll_weapons" value="&{template:weapons} {{name=@{weapons_name}}} {{trait=@{weapons_trait}}} {{range=@{weapons_range}}} {{damage=@{weapons_damage_die_text}}} {{bonus=@{weapons_damage_bonus_text}}} {{feature=@{weapons_feature}}}">
+                                <span name="attr_weapons_name"></span>
+                                <span name="attr_weapons_trait"></span>
+                                <span name="attr_weapons_range"></span>
+                                <span name="attr_weapons_type"></span>
+                                <span name="attr_weapons_damage_die_text"></span>
+                                <span name="attr_weapons_damage_bonus_text"></span>
+                                <span name="attr_weapons_feature" class="sheet-tooltipText sheet-keep-whitespace"></span>
+                            </button>
+                        </h3>
+                    </div>
+                </div>
+            </fieldset>
+
+        </div>
+
+        <div class="sheet-break"></div>
 
     <!--NOTES SECTION:
         1. Make a part of the sheet instead of an individual tab
-   
-        <input class="sheet-notesTab-flag sheet-hidden" type="checkbox" name="attr_show_notesTab_flag" value="1" />
- -->
-        <!--
+    -->
+
+        <input class="sheet-weapons-flag sheet-hidden" type="checkbox" name="attr_show_weapons_flag" value="1" />
+
         <div class="sheet-section-notes sheet-section">
             <div class="sheet-header">
                 <span>NOTES</span>
             </div>
+
             <fieldset class="repeating_notes">
                 <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
                 <div class="sheet-item-options sheet-notes-edit">
@@ -476,80 +521,41 @@
                     <span name="attr_body" class="sheet-keep-whitespace"></span>
                 </div>
             </fieldset>
-        </div>
-    </div>
-    
-    <div class="sheet-tab-content sheet-tab3">
-        <h1>Notes</h1>
-        <fieldset class="repeating_notes">
-            <div class="sheet-header">
-                <span name="attr_title"></span>
-                <div class="sheet-section-options">
-                    <input class="sheet-section-options-flag" type="checkbox" name="attr_options_flag" checked="checked" />
-                    <span>p</span>
-                </div>
-            </div>
-            <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
-            <div class="sheet-options">
-                <input type="text" name="attr_title" placeholder="Notes Title" />
-                <textarea name="attr_body" placeholder="Notes"></textarea>
-            </div>
-            <div class="sheet-display">
-                <span name="attr_body" class="sheet-keep-whitespace"></span>
-            </div>
-        </fieldset>
-    </div>
-    
-    <div class="sheet-tab-content sheet-tab4">
-        <h1>Settings</h1>
 
-        <div class="sheet-section">
-            <div class="sheet-header">
-                <span>Display Options</span>
-            </div>
         </div>
 
-        
-        <div class="sheet-section">
-            <div class="sheet-header">
-                <span>Game Defaults</span>
-            </div>
-            <div class="sheet-settings">
-                <div class="sheet-setting">
-                    <div class="sheet-header">
-                        <span>Run First Time Setup</span>
-                    </div>
-                    <div>
-                        <input type="checkbox" value="1" name="attr_run_firstTime_setup" checked="checked" />
-                        <p><span>Run scripts to setup the sheet for a default character.</span></p>
-                    </div>
+        <div class="sheet-break"></div>
+
+<!--SKILL ROLL SECTION: -->
+
+<rolltemplate class="sheet-rolltemplate-skill">
+    <div class="sheet-rollTemplate">
+        <div class="row sheet-header">
+            <span>Duality:</span>
+            <span>{{name}}</span>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <label>Boon</label>
+                    <span>{{boon}}</span>
                 </div>
-                <div class="sheet-setting">
-                    <div class="sheet-header">
-                        <span>Default Status</span>
-                    </div>
-                    <div>
-                        <input type="text" value="Stress,Sanity,Enlightenment" name="attr_default_stressSkills" />
-                        <p><span>When setting up a default sheet, what stress tracks and their guiding skill should be set up? e.g. "Mental:Will,Extra:3"</span></p>
-                    </div>
+                <div class="row">
+                    <label>Dread</label>
+                    <span>{{dread}}</span>
                 </div>
-                <div class="sheet-setting">
-                    <div class="sheet-header">
-                        <span>Default Consequences</span>
-                    </div>
-                    <div>
-                        <input type="text" value="2,4,6" name="attr_default_consequences" />
-                        <p><span>When setting up a default sheet, what consequences are the default consequences? e.g. "2,4,6"</span></p>
-                    </div>
+                <div class="row">
+                    <label>Results</label>
+                    <span></span>
                 </div>
             </div>
         </div>
-    </div>
-
+     </div>
 </div>
--->
+</rolltemplate>
 
-<!--BONUS ROLL SECTION: DONE
+<!--BONUS ROLL SECTION: DONE-->
+
 <rolltemplate class="sheet-rolltemplate-bonuses">
     <div class="sheet-rollTemplate">
         <div class="row sheet-header">
@@ -562,9 +568,10 @@
         </div>
     </div>
 </rolltemplate>
--->
 
-<!--KEYWORD ROLL SECTION: DONE
+
+<!--KEYWORD ROLL SECTION: DONE-->
+
 <rolltemplate class="sheet-rolltemplate-keywords">
     <div class="sheet-rollTemplate">
         <div class="row sheet-header">
@@ -582,32 +589,53 @@
         </div>
     </div>
 </rolltemplate>
--->
+
 
 <!--SKILL ROLL SECTION:
     1. Make 2 similar columns to emulate advantage/disadvantage
     2. Implement rolls + modifier
+-->
 
-<rolltemplate class="sheet-rolltemplate-skill">
+
+<!--WEAPONS ROLL SECTION
+    1. Show weapon roll and damage when pressed
+    2. Damage and Bonus does not show up auhhuhuh
+    3. Have an option to set weapon to active/inactive and primary/secondary
+-->
+
+<rolltemplate class="sheet-rolltemplate-weapons">
     <div class="sheet-rollTemplate">
         <div class="row sheet-header">
-            <span>{{skill}}</span>
+            <span>Weapon</span>
+            <span>: </span>
+            <span>{{name}}</span>
         </div>
-        <div class="sheet-col">
-            <div class="row">
-                <label>Boon</label>
-                <label>Dread</label>
-                <label>Result</label>
-            </div>
-            <div class="sheet-row">
-                <label>Boon</label>
-                <label>Dread</label>
-                <label>Result</label>
-            </div>
+        <div class="row">
+            <span class="sheet-inlineLabel">Trait</span>
+            <span class="sheet-inlineLabel">: </span>
+            <span>{{trait}}</span>
+        </div>
+        <div class="row">
+            <span class="sheet-inlineLabel">Range</span>
+            <span class="sheet-inlineLabel">: </span>
+            <span>{{range}}</span>
+        </div>
+        <div class="row">
+            <span class="sheet-inlineLabel">Type</span>
+            <span class="sheet-inlineLabel">: </span>
+            <span>{{type}}</span>
+        </div>
+        <div class="row">
+            <span class="sheet-inlineLabel">Damage</span>
+            <span class="sheet-inlineLabel">: </span>
+            <span>{{damage}} + {{bonus}}</span>
+        </div>
+        <div class="row">
+            <span>{{description}}</span>
         </div>
     </div>
 </rolltemplate>
--->
+
     
 <script type="text/worker">
     on('sheet:opened', function () {
@@ -653,63 +681,6 @@
         });
     };
     
-    function ImportSkills () {
-        getAttrs(["LegendaryActive", "EpicActive", "FantasticActive",
-                    "SuperbActive", "PoorActive", "TerribleActive"], settings => {
-            var attrs = [];
-            for (var i = 1; i < 9; i++) {
-                if (!isNullOrWhitespace(settings["LegendaryActive"]) || typeof settings["LegendaryActive"] === "undefined")
-                    attrs.push("Leg" + i);
-                if (!isNullOrWhitespace(settings["EpicActive"]) || typeof settings["LegendaryActive"] === "undefined")
-                    attrs.push("Epic" + i);
-                if (!isNullOrWhitespace(settings["FantasticActive"]) || typeof settings["LegendaryActive"] === "undefined")
-                    attrs.push("Fan" + i);
-                if (!isNullOrWhitespace(settings["SuperbActive"]) || typeof settings["LegendaryActive"] === "undefined")
-                    attrs.push("Sup" + i);
-                attrs.push("Great" + i);
-                attrs.push("Good" + i);
-                attrs.push("Fair" + i);
-                attrs.push("Avg" + i);
-                if (!isNullOrWhitespace(settings["PoorActive"]) || typeof settings["LegendaryActive"] === "undefined")
-                    attrs.push("Poor" + i);
-                if (!isNullOrWhitespace(settings["TerribleActive"]) || typeof settings["LegendaryActive"] === "undefined")
-                    attrs.push("Ter" + i);
-            }
-    
-            getAttrs(attrs, function (values) {
-                for (var i = 1; i < 9; i++) {
-                    if (!isNullOrWhitespace(settings["LegendaryActive"]) || typeof settings["LegendaryActive"] === "undefined")
-                        importSkill(values["Leg" + i], 8);
-                    if (!isNullOrWhitespace(settings["EpicActive"]) || typeof settings["LegendaryActive"] === "undefined")
-                        importSkill(values["Epic" + i], 7);
-                    if (!isNullOrWhitespace(settings["FantasticActive"]) || typeof settings["LegendaryActive"] === "undefined")
-                        importSkill(values["Fan" + i], 6);
-                    if (!isNullOrWhitespace(settings["SuperbActive"]) || typeof settings["LegendaryActive"] === "undefined")
-                        importSkill(values["Sup" + i], 5);
-                    importSkill(values["Great" + i], 4);
-                    importSkill(values["Good" + i], 3);
-                    importSkill(values["Fair" + i], 2);
-                    importSkill(values["Avg" + i], 1);
-                    if (!isNullOrWhitespace(settings["PoorActive"]) || typeof settings["LegendaryActive"] === "undefined")
-                        importSkill(values["Poor" + i], -1);
-                    if (!isNullOrWhitespace(settings["TerribleActive"]) || typeof settings["LegendaryActive"] === "undefined")
-                        importSkill(values["Ter" + i], -2);
-                }
-            });
-        });
-    };
-    
-    const importSkill = (skill, skillLevel) => {
-        if (isNullOrWhitespace(skill))
-            return;
-    
-        var newRowId = generateRowID();
-        var newRowAttrs = {};
-        newRowAttrs["repeating_skills_" + newRowId + "_skill"] = skill;
-        newRowAttrs["repeating_skills_" + newRowId + "_shiftLevel"] = skillLevel;
-        newRowAttrs["repeating_skills_" + newRowId + "_shiftLevelText"] = getShiftText(skillLevel);
-        setAttrs(newRowAttrs);
-    };
     
     function ImportAspects () {
         var attrs = [];
@@ -1137,293 +1108,6 @@
         });
     };
     
-    on("change:repeating_consequences:worth", function (eventInfo) {
-        getAttrs(["show_conditions_flag"], function (values) {
-            if (!isNullOrWhitespace(values["show_conditions_flag"]))
-                setAttrs({ repeating_consequences_worth_text: getConditionsText(Number(eventInfo.newValue)) });
-            else
-                setAttrs({ repeating_consequences_worth_text: getConsequenceText(Number(eventInfo.newValue)) });
-        });
-    });
-    
-    on("change:show_conditions_flag", function (eventInfo) {
-        getSectionIDs("repeating_consequences", function (idArray) {
-            if (idArray.length == 0)
-                return;
-    
-            var attrs = [];
-            for (var i = 0; i < idArray.length; i++) {
-                attrs.push("repeating_consequences_" + idArray[i] + "_worth");
-            }
-    
-            getAttrs(attrs, function (values) {
-                var newRowAttrs = {};
-                for (var i = 0; i < idArray.length; i++) {
-                    var worth = Number(values["repeating_consequences_" + idArray[i] + "_worth"]);
-                    if (!isNullOrWhitespace(eventInfo.newValue))
-                        newRowAttrs["repeating_consequences_" + idArray[i] + "_worth_text"] = getConditionsText(worth);
-                    else
-                        newRowAttrs["repeating_consequences_" + idArray[i] + "_worth_text"] = getConsequenceText(worth);
-                }
-    
-                setAttrs(newRowAttrs);
-            });
-        });
-    });
-    
-    on("change:repeating_skills:skill", function (eventInfo) {
-        skillChanged(eventInfo.previousValue, 0);
-        getAttrs(["repeating_skills_shiftLevel"], function (values) {
-            skillChanged(eventInfo.newValue, Number(values["repeating_skills_shiftLevel"]));
-        });
-    });
-    
-    on("change:repeating_skills:shiftLevel", function (eventInfo) {
-        var skillLevel = Number(eventInfo.newValue);
-        setAttrs({ repeating_skills_shiftLevelText: getShiftText(skillLevel) });
-        getAttrs(["repeating_skills_skill"], function (values) {
-            skillChanged(values["repeating_skills_skill"], skillLevel);
-        });
-    });
-    
-    on("clicked:addSkill8", function () {
-        createSkill(8);
-    });
-    
-    on("clicked:removeSkill8", function () {
-        removeSkill(8);
-    });
-    
-    on("clicked:addSkill7", function () {
-        createSkill(7);
-    });
-    
-    on("clicked:removeSkill7", function () {
-        removeSkill(7);
-    });
-    
-    on("clicked:addSkill6", function () {
-        createSkill(6);
-    });
-    
-    on("clicked:removeSkill6", function () {
-        removeSkill(6);
-    });
-    
-    on("clicked:addSkill5", function () {
-        createSkill(5);
-    });
-    
-    on("clicked:removeSkill5", function () {
-        removeSkill(5);
-    });
-    
-    on("clicked:addSkill4", function () {
-        createSkill(4);
-    });
-    
-    on("clicked:removeSkill4", function () {
-        removeSkill(4);
-    });
-    
-    on("clicked:addSkill3", function () {
-        createSkill(3);
-    });
-    
-    on("clicked:removeSkill3", function () {
-        removeSkill(3);
-    });
-    
-    on("clicked:addSkill2", function () {
-        createSkill(2);
-    });
-    
-    on("clicked:removeSkill2", function () {
-        removeSkill(2);
-    });
-    
-    on("clicked:addSkill1", function () {
-        createSkill(1);
-    });
-    
-    on("clicked:removeSkill1", function () {
-        removeSkill(1);
-    });
-    
-    on("clicked:addSkill0", function () {
-        createSkill(0);
-    });
-    
-    on("clicked:removeSkill0", function () {
-        removeSkill(0);
-    });
-    
-    on("clicked:addSkillN1", function () {
-        createSkill(-1);
-    });
-    
-    on("clicked:removeSkillN1", function () {
-        removeSkill(-1);
-    });
-    
-    on("clicked:addSkillN2", function () {
-        createSkill(-2);
-    });
-    
-    on("clicked:removeSkillN2", function () {
-        removeSkill(-2);
-    });
-    
-    on("change:repeating_stunts:skill", function (eventInfo) {
-        getSectionIDs("repeating_skills", function (idArray) {
-            if (idArray.length == 0)
-                return;
-    
-            var attrs = [];
-            for (var i = 0; i < idArray.length; i++) {
-                attrs.push("repeating_skills_" + idArray[i] + "_skill");
-                attrs.push("repeating_skills_" + idArray[i] + "_shiftLevel");
-                attrs.push("repeating_skills_" + idArray[i] + "_shiftLevelText");
-            }
-    
-            getAttrs(attrs, function (values) {
-                var skillShiftLevel = 0;
-                var skillShiftLevelText = getShiftText(0);
-    
-                for (var i = 0; i < idArray.length; i++) {
-                    if (values["repeating_skills_" + idArray[i] + "_skill"] == eventInfo.newValue) {
-                        skillShiftLevel = values["repeating_skills_" + idArray[i] + "_shiftLevel"];
-                        skillShiftLevelText = values["repeating_skills_" + idArray[i] + "_shiftLevelText"];
-                        break;
-                    }
-                }
-    
-                setAttrs({
-                    repeating_stunts_skillShiftLevel: skillShiftLevel,
-                    repeating_stunts_skillShiftLevelText: skillShiftLevelText
-                });
-            });
-        });
-    });
-    
-    on("change:repeating_stunts:bonusShifts", function (eventInfo) {
-        var description = getShiftText(Number(eventInfo.newValue));
-        setAttrs({ repeating_stunts_bonusShiftsText: description });
-    });
-    
-    on("change:repeating_stunts:type", function (eventInfo) {
-        var description;
-        switch (Number(eventInfo.newValue)) {
-            case 1:
-                description = "New Action to Skill";
-                break;
-            case 2:
-                description = "Bonus to Action";
-                break;
-            default:
-                description = "Rules Exception";
-                break;
-        }
-        setAttrs({ repeating_stunts_typeText: description });
-    
-        if (Number(eventInfo.newValue) == 2) {
-            getAttrs(["repeating_stunts_bonusShifts"], function (values) {
-                if (isNullOrWhitespace(values["repeating_stunts_bonusShifts"])) {
-                    var description = getShiftText(2);
-                    setAttrs({ repeating_stunts_bonusShiftsText: description, repeating_stunts_bonusShifts: 2 });
-                }
-                else {
-                    var description = getShiftText(Number(values["repeating_stunts_bonusShifts"]));
-                    setAttrs({ repeating_stunts_bonusShiftsText: description });
-                }
-            });
-        }
-    });
-    
-    on("change:repeating_stress:skill", function (eventInfo) {
-        getSectionIDs("repeating_skills", function (idArray) {
-            if (idArray.length == 0)
-                return;
-    
-            var attrs = [];
-            for (var i = 0; i < idArray.length; i++) {
-                attrs.push("repeating_skills_" + idArray[i] + "_skill");
-                attrs.push("repeating_skills_" + idArray[i] + "_shiftLevel");
-            }
-    
-            getAttrs(attrs, function (values) {
-                var stressMax;
-    
-                for (var i = 0; i < idArray.length; i++) {
-                    if (values["repeating_skills_" + idArray[i] + "_skill"] == eventInfo.newValue) {
-                        var skillShiftLevel = Number(values["repeating_skills_" + idArray[i] + "_shiftLevel"]);
-                        stressMax = getStressMax(skillShiftLevel);
-                    }
-                }
-    
-                if (stressMax != null) {
-                    setAttrs({ repeating_stress_usable: stressMax, repeating_stress_bound: 1 });
-                }
-            });
-        });
-    });
-    
-    on("change:repeating_stress:usable", function (eventInfo) {
-        if (eventInfo.sourceType != "sheetworker")
-            setAttrs({ repeating_stress_bound: 0 });
-    });
-    
-    on("clicked:clearStress", function () {
-        getSectionIDs("repeating_stress", function (idArray) {
-            if (idArray.length == 0)
-                return;
-    
-            var editAttrs = {};
-            for (var i = 0; i < idArray.length; i++) {
-                for (var x = 1; x < 9; x++) {
-                    editAttrs["repeating_stress_" + idArray[i] + "_isUsed" + x] = "";
-                }
-            }
-    
-            setAttrs(editAttrs);
-        });
-    });
-    
-    function getShiftText(shiftLevel) {
-        switch (shiftLevel) {
-            case 8:
-                return "Legendary";
-            case 7:
-                return "Epic";
-            case 6:
-                return "Fantastic";
-            case 5:
-                return "Superb";
-            case 4:
-                return "Great";
-            case 3:
-                return "Good";
-            case 2:
-                return "Fair";
-            case 1:
-                return "Average";
-            case 0:
-                return "Mediocre";
-            case -1:
-                return "Poor";
-            case -2:
-                return "Terrible";
-        }
-    
-        if (shiftLevel > 8) {
-            return "Legendary+" + (shiftLevel - 8);
-        }
-        if (shiftLevel < -2) {
-            return "Terrible" + (shiftLevel + 2);
-        }
-    
-        return "";
-    };
     
     function getConsequenceText(worth) {
         switch (Number(worth)) {
@@ -1464,102 +1148,6 @@
     
         return 4;
     };
-    
-    const createSkill = (skillLevel) => {
-        var newRowId = generateRowID();
-        var newRowAttrs = {};
-        newRowAttrs["repeating_skills_" + newRowId + "_shiftLevel"] = skillLevel;
-        newRowAttrs["repeating_skills_" + newRowId + "_shiftLevelText"] = getShiftText(skillLevel);
-        setAttrs(newRowAttrs);
-    };
-    
-    const removeSkill = (skillLevel) => {
-        getSectionIDs("repeating_skills", function (idArray) {
-            if (idArray.length == 0)
-                return;
-    
-            var attrs = [];
-            for (var i = 0; i < idArray.length; i++) {
-                attrs.push("repeating_skills_" + idArray[i] + "_skill");
-                attrs.push("repeating_skills_" + idArray[i] + "_shiftLevel");
-            }
-    
-            getAttrs(attrs, function (values) {
-                var lastRowId;
-                var lastSkill;
-    
-                for (var i = 0; i < idArray.length; i++) {
-                    if (Number(values["repeating_skills_" + idArray[i] + "_shiftLevel"]) == skillLevel) {
-                        lastRowId = idArray[i];
-                        lastSkill = values["repeating_skills_" + idArray[i] + "_skill"]
-                    }
-                }
-    
-                if (lastRowId != null) {
-                    removeRepeatingRow("repeating_skills_" + lastRowId);
-                    skillChanged(lastSkill, 0);
-                }
-            });
-        });
-    };
-    
-    const skillChanged = (skill, skillLevel) => {
-        if (isNullOrWhitespace(skill))
-            return;
-    
-        if (skillLevel == null || isNaN(skillLevel))
-            skillLevel = 0;
-    
-        var skillLevelDesc = getShiftText(skillLevel);
-    
-        //adjust Stunts
-        getSectionIDs("repeating_stunts", function (idArray) {
-            if (idArray.length == 0)
-                return;
-    
-            var attrs = [];
-            for (var i = 0; i < idArray.length; i++) {
-                attrs.push("repeating_stress_" + idArray[i] + "_skill");
-            }
-    
-            getAttrs(attrs, function (values) {
-                var editAttrs = {};
-                for (var i = 0; i < idArray.length; i++) {
-                    if (!isNullOrWhitespace(values["repeating_stress_" + idArray[i] + "_bound"])
-                            && values["repeating_stress_" + idArray[i] + "_skill"] == skill) {
-                        editAttrs["repeating_stress_" + idArray[i] + "_shiftLevel"] = skillLevel;
-                        editAttrs["repeating_stress_" + idArray[i] + "_shiftLevelText"] = skillLevelDesc;
-                    }
-                }
-    
-                setAttrs(editAttrs);
-            });
-        });
-    
-        //adjust Stress
-        getSectionIDs("repeating_stress", function (idArray) {
-            if (idArray.length == 0)
-                return;
-    
-            var attrs = [];
-            for (var i = 0; i < idArray.length; i++) {
-                attrs.push("repeating_stress_" + idArray[i] + "_skill");
-                attrs.push("repeating_stress_" + idArray[i] + "_bound");
-            }
-    
-            getAttrs(attrs, function (values) {
-                var editAttrs = {};
-                for (var i = 0; i < idArray.length; i++) {
-                    if (!isNullOrWhitespace(values["repeating_stress_" + idArray[i] + "_bound"])
-                            && values["repeating_stress_" + idArray[i] + "_skill"] == skill) {
-                        editAttrs["repeating_stress_" + idArray[i] + "_usable"] = getStressMax(skillLevel);
-                    }
-                }
-    
-                setAttrs(editAttrs);
-            });
-        });
-    }
     
     const isNullOrWhitespace = (attr) => !(attr && (attr.trim ? attr.trim() && attr.trim() != "0" : attr > 0));
 </script>

@@ -3,7 +3,8 @@
     background-image: url(https://raw.github.com/milostuff/black-label-sheet/main/doodles.png), 
     url(https://raw.github.com/milostuff/black-label-sheet/main/paper.jpg);
     background-size: contain;
-    border: solid 5px
+    border: solid 5px;
+    padding: 10px
 }
 
 /*===Tabs===*/
@@ -49,13 +50,12 @@ input.sheet-tab4 + span::before {
 }
 
 input.sheet-phase0-flag:checked ~ input.sheet-tab3 + span::before,
-input.sheet-phase0-flag:checked ~ input.sheet-tab4 + span::before,
-input.sheet-notesTab-flag:checked ~ input.sheet-tab4 + span::before {
+input.sheet-phase0-flag:checked ~ input.sheet-tab4 + span::before{
     border-left: none;
     left: 313px;
 }
 
-input.sheet-phase0-flag:checked + input.sheet-notesTab-flag:checked ~ input.sheet-tab4 + span::before {
+input.sheet-phase0-flag:checked  ~ input.sheet-tab4 + span::before {
     border-left: none;
     left: 463px;
 }
@@ -76,9 +76,7 @@ input.sheet-tab4:checked ~ div.sheet-tab4 {
 }
 
 input.sheet-phase0-flag:checked ~ input.sheet-tab1,
-input.sheet-phase0-flag:checked ~ input.sheet-tab1 + span::before,
-input.sheet-notesTab-flag:checked ~ input.sheet-tab3,
-input.sheet-notesTab-flag:checked ~ input.sheet-tab3 + span::before {
+input.sheet-phase0-flag:checked ~ input.sheet-tab1 + span::before {
     display: inline-block;
 }
 
@@ -90,8 +88,8 @@ div.sheet-tab-content {
 
 /* === GENERAL === */
 .sheet-rolltemplate-level .sheet-header,
-.sheet-rolltemplate-refresh .sheet-header,
-.sheet-rolltemplate-aspect .sheet-header,
+.sheet-rolltemplate-weapons .sheet-header,
+.sheet-rolltemplate-inventory .sheet-header,
 .sheet-rolltemplate-skill .sheet-header,
 .sheet-rolltemplate-bonuses .sheet-header,
 .sheet-rolltemplate-keywords .sheet-header,
@@ -108,8 +106,8 @@ div.sheet-tab-content {
 
 .sheet-inlineLabel,
 .sheet-rolltemplate-level .sheet-inlineLabel,
-.sheet-rolltemplate-refresh .sheet-inlineLabel,
-.sheet-rolltemplate-aspect .sheet-inlineLabel,
+.sheet-rolltemplate-weapons .sheet-inlineLabel,
+.sheet-rolltemplate-inventory .sheet-inlineLabel,
 .sheet-rolltemplate-skill .sheet-inlineLabel,
 .sheet-rolltemplate-bonuses .sheet-inlineLabel,
 .sheet-rolltemplate-keywords .sheet-inlineLabel,
@@ -121,7 +119,7 @@ div.sheet-tab-content {
     float: left;
     width: 100%;
     margin: 4px 0;
-    padding: 1px;
+    padding: 5px;
     box-sizing: border-box;
 }
 
@@ -291,7 +289,6 @@ button[type=roll]:hover,
 .sheet-inline-options,
 .sheet-hint,
 .sheet-options-flag:checked ~ .sheet-display,
-.sheet-notesTab-flag:checked ~ .sheet-section-notes,
 .sheet-options-flag:checked ~ .sheet-skills-pyramid .sheet-display,
 .sheet-rollable-flag-true,
 .sheet-rollable-flag:checked ~ .sheet-skills-pyramid .sheet-rollable-flag-false,
@@ -354,26 +351,6 @@ button[type=roll]:hover,
 }
 
 /* === BASIC === */
-.sheet-logo {
-    width: 200px;
-    margin: -25px 5px 0 5px;
-    vertical-align: middle;
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
-    filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
-}
-
-.sheet-h1-logo {
-    margin-top: 35px;
-}
-
-.sheet-section-basic tr {
-    margin-left: 5px;
-}
-
-.sheet-section-basic td {
-    padding: 2px;
-}
 
 .sheet-section-basic input[type="number"] {
     width: 100px !important;
@@ -416,18 +393,6 @@ button[type=roll]:hover,
     display: inline-block;
 }
 
-/* === Character Idea === */
-.sheet-section-idea input {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* === Phase Trio === */
-.sheet-section-phase-trio input {
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 2px;
-}
 
 /* === MECHANICS === */
 .sheet-section-mechanics input[type=number]{
@@ -586,11 +551,6 @@ input[type="checkbox"] + span.sheet-check-label {
     display: block;
 }
 
-/* === EXTRAS === */
-.sheet-section-stunt {
-    padding-right: 2.5px
-}
-
 /* === STRESS === */
 .sheet-section-extras {
     padding-left: 2.5px
@@ -729,26 +689,8 @@ span.sheet-stress-header-skill:empty:after {
     width: 90px;
     display: inline-block;
 }
-.sheet-consequence-aspect {
-    vertical-align: middle;
-    flex-grow: 1;
-}
-span.sheet-consequence-healing {
-    font-family: 'pictos';
-    margin-left: -1.5px !important;
-}
 
-.sheet-consequence-healing input[type="checkbox"]::before {
-    position: relative;
-    top: -0.65em;
-    right: 0.5em;
-    font-weight: bold;
-    font-family: 'pictos';
-    content: "k";
-}
-
-.sheet-conditions-row .sheet-consequence-worth,
-.sheet-consequence-healing {
+.sheet-conditions-row .sheet-consequence-worth {
     width: 35px;
 }
 
@@ -783,28 +725,10 @@ span.sheet-consequence-healing {
     display: flex;
 }
 
-/* === SETTINGS === */
-.sheet-settings {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.sheet-setting {
-    width: 200px;
-    margin: 4px;
-    padding: 4px;
-    box-sizing: border-box;
-}
-
-.sheet-setting input[type="text"],
-.sheet-setting select {
-    width: 100%;
-}
-
 /* === ROLL TEMPLATE === */
 .sheet-rolltemplate-level .sheet-rollTemplate,
-.sheet-rolltemplate-refresh .sheet-rollTemplate,
-.sheet-rolltemplate-aspect .sheet-rollTemplate,
+.sheet-rolltemplate-weapons .sheet-rollTemplate,
+.sheet-rolltemplate-inventory .sheet-rollTemplate,
 .sheet-rolltemplate-skill .sheet-rollTemplate,
 .sheet-rolltemplate-bonuses .sheet-rollTemplate,
 .sheet-rolltemplate-keywords .sheet-rollTemplate,
@@ -813,8 +737,8 @@ span.sheet-consequence-healing {
 }
 
 .sheet-rolltemplate-level .sheet-rollTemplate .sheet-header,
-.sheet-rolltemplate-refresh .sheet-rollTemplate .sheet-header,
-.sheet-rolltemplate-aspect .sheet-rollTemplate .sheet-header,
+.sheet-rolltemplate-weapons .sheet-rollTemplate .sheet-header,
+.sheet-rolltemplate-inventory .sheet-rollTemplate .sheet-header,
 .sheet-rolltemplate-skill .sheet-rollTemplate .sheet-header,
 .sheet-rolltemplate-bonuses .sheet-rollTemplate .sheet-header,
 .sheet-rolltemplate-keywords .sheet-rollTemplate .sheet-header,
@@ -823,8 +747,8 @@ span.sheet-consequence-healing {
 }
 
 .sheet-rolltemplate-level .sheet-fate-point-circle,
-.sheet-rolltemplate-refresh .sheet-fate-point-circle,
-.sheet-rolltemplate-aspect .sheet-fate-point-circle,
+.sheet-rolltemplate-weapons .sheet-fate-point-circle,
+.sheet-rolltemplate-inventory .sheet-fate-point-circle,
 .sheet-rolltemplate-skill .sheet-fate-point-circle,
 .sheet-rolltemplate-bonuses .sheet-fate-point-circle,
 .sheet-rolltemplate-keywords .sheet-fate-point-circle,
@@ -841,19 +765,19 @@ span.sheet-consequence-healing {
 }
 
 .sheet-rolltemplate-level .sheet-fate-point-circle span,
-.sheet-rolltemplate-refresh .sheet-fate-point-circle span,
-.sheet-rolltemplate-aspect .sheet-bonus-circle span,
+.sheet-rolltemplate-weapons .sheet-fate-point-circle span,
+.sheet-rolltemplate-inventory .sheet-bonus-circle span,
 .sheet-rolltemplate-skill .sheet-fate-point-circle span,
 .sheet-rolltemplate-bonuses .sheet-fate-point-circle span,
 .sheet-rolltemplate-keywords .sheet-fate-point-circle span,
-.sheet-rolltemplate-aspect .sheet-fate-point-circle span,
+.sheet-rolltemplate-inventory .sheet-fate-point-circle span,
 .sheet-rolltemplate-consequence .sheet-fate-point-circle span {
     line-height: 30px;
 }
 
 .sheet-rolltemplate-level .sheet-fate-point-circle + .sheet-header,
-.sheet-rolltemplate-refresh .sheet-fate-point-circle + .sheet-header,
-.sheet-rolltemplate-aspect .sheet-fate-point-circle + .sheet-header,
+.sheet-rolltemplate-weapons .sheet-fate-point-circle + .sheet-header,
+.sheet-rolltemplate-inventory .sheet-fate-point-circle + .sheet-header,
 .sheet-rolltemplate-skill .sheet-fate-point-circle + .sheet-header,
 .sheet-rolltemplate-bonuses .sheet-fate-point-circle + .sheet-header,
 .sheet-rolltemplate-keywords .sheet-fate-point-circle + .sheet-header,
@@ -862,8 +786,8 @@ span.sheet-consequence-healing {
 }
 
 .sheet-rolltemplate-level .sheet-uppercase,
-.sheet-rolltemplate-refresh .sheet-uppercase,
-.sheet-rolltemplate-aspect .sheet-uppercase,
+.sheet-rolltemplate-weapons .sheet-uppercase,
+.sheet-rolltemplate-inventory .sheet-uppercase,
 .sheet-rolltemplate-skill .sheet-uppercase,
 .sheet-rolltemplate-bonuses .sheet-uppercase,
 .sheet-rolltemplate-keywords .sheet-uppercase,
@@ -872,8 +796,8 @@ span.sheet-consequence-healing {
 }
 
 .sheet-rolltemplate-level .sheet-warning,
-.sheet-rolltemplate-refresh .sheet-warning,
-.sheet-rolltemplate-aspect .sheet-warning,
+.sheet-rolltemplate-weapons .sheet-warning,
+.sheet-rolltemplate-inventory .sheet-warning,
 .sheet-rolltemplate-skill .sheet-warning,
 .sheet-rolltemplate-bonuses .sheet-warning,
 .sheet-rolltemplate-keywords .sheet-warning,
@@ -882,8 +806,8 @@ span.sheet-consequence-healing {
 }
 
 .sheet-rolltemplate-level .sheet-warning::before,
-.sheet-rolltemplate-refresh .sheet-warning::before,
-.sheet-rolltemplate-aspect .sheet-warning::before,
+.sheet-rolltemplate-weapons .sheet-warning::before,
+.sheet-rolltemplate-inventory .sheet-warning::before,
 .sheet-rolltemplate-skill .sheet-warning::before,
 .sheet-rolltemplate-bonuses .sheet-warning::before,
 .sheet-rolltemplate-keywords .sheet-warning::before,
@@ -891,16 +815,4 @@ span.sheet-consequence-healing {
     color: red;
     font-family: 'pictos';
     content: "!";
-}
-
-.sheet-rolltemplate-aspect .sheet-bonus-circle {
-    border-radius: 15px;
-    top: -15px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    right: 50px;
-    display: block;
-    position: absolute;
-    background-color: silver;
 }
