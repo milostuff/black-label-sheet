@@ -1,99 +1,14 @@
 .sheet-container {
     position: relative;
-    background-image: url(https://raw.github.com/milostuff/black-label-sheet/main/doodles.png), 
-    url(https://raw.github.com/milostuff/black-label-sheet/main/paper.jpg);
+    background-image: url(https://raw.github.com/milostuff/black-label-sheet/main/paper.jpg);
     background-size: contain;
     border: solid 5px;
-    padding: 10px
-}
+    padding: 10px;
 
-/*===Tabs===*/
-input.sheet-tab {
-    width: 150px;
-    height: 20px;
-    position: relative;
-    top: 5px;
-    left: 13px;
-    margin: -1.5px;
-    cursor: pointer;
-    z-index: 1;
-    opacity: 0;
-}
-
-input.sheet-tab + span::before {
-    content: attr(title);
-    border: solid 1px #a8a8a8;
-    border-bottom-color: black;
-    text-align: center;
-    display: inline-block;
-    background: #fff;
-    background: linear-gradient(to top, #c8c8c8, #fff, #c8c8c8);
-    width: 150px;
-    height: 20px;
-    font-size: 18px;
-    position: absolute;
-    top: 6px;
-    left: 13px;
-}
-
-input.sheet-tab:checked + span::before {
-    background: #dcdcdc;
-    background: linear-gradient(to top, #fcfcfc, #dcdcdc, #fcfcfc);
-    border-bottom-color: #fff;
-}
-
-input.sheet-phase0-flag:checked ~ input.sheet-tab2 + span::before,
-input.sheet-tab3 + span::before,
-input.sheet-tab4 + span::before {
-    border-left: none;
-    left: 163px;
-}
-
-input.sheet-phase0-flag:checked ~ input.sheet-tab3 + span::before,
-input.sheet-phase0-flag:checked ~ input.sheet-tab4 + span::before{
-    border-left: none;
-    left: 313px;
-}
-
-input.sheet-phase0-flag:checked  ~ input.sheet-tab4 + span::before {
-    border-left: none;
-    left: 463px;
-}
-
-input.sheet-tab1,
-input.sheet-tab1 + span::before,
-input.sheet-tab3,
-input.sheet-tab3 + span::before,
-div.sheet-tab-content {
-    display: none;
-}
-
-input.sheet-tab1:checked ~ div.sheet-tab1,
-input.sheet-tab2:checked ~ div.sheet-tab2,
-input.sheet-tab3:checked ~ div.sheet-tab3,
-input.sheet-tab4:checked ~ div.sheet-tab4 {
-    display: block;
-}
-
-input.sheet-phase0-flag:checked ~ input.sheet-tab1,
-input.sheet-phase0-flag:checked ~ input.sheet-tab1 + span::before {
-    display: inline-block;
-}
-
-div.sheet-tab-content {
-    border-top: 1px solid #000000;
-    margin: 2px 0 0 5px;
-    padding: 5px;
+    font-family: Georgia, serif; 
 }
 
 /* === GENERAL === */
-.sheet-rolltemplate-level .sheet-header,
-.sheet-rolltemplate-weapons .sheet-header,
-.sheet-rolltemplate-inventory .sheet-header,
-.sheet-rolltemplate-skill .sheet-header,
-.sheet-rolltemplate-bonuses .sheet-header,
-.sheet-rolltemplate-keywords .sheet-header,
-.sheet-rolltemplate-consequence .sheet-header,
 .sheet-header {
     margin-bottom: 4px;
     padding: 2px 8px;
@@ -104,23 +19,21 @@ div.sheet-tab-content {
     border-bottom-right-radius: 10px;
 }
 
-.sheet-inlineLabel,
-.sheet-rolltemplate-level .sheet-inlineLabel,
-.sheet-rolltemplate-weapons .sheet-inlineLabel,
-.sheet-rolltemplate-inventory .sheet-inlineLabel,
-.sheet-rolltemplate-skill .sheet-inlineLabel,
-.sheet-rolltemplate-bonuses .sheet-inlineLabel,
-.sheet-rolltemplate-keywords .sheet-inlineLabel,
-.sheet-rolltemplate-consequence .sheet-inlineLabel {
+.sheet-inlineLabel{
     font-weight: bold;
+    padding-left: 10px;
 }
 
 .sheet-section {
     float: left;
     width: 100%;
     margin: 4px 0;
-    padding: 5px;
+    padding-left: 5px;
     box-sizing: border-box;
+}
+
+.sheet-container label{
+    color: black;
 }
 
 .sheet-half {
@@ -289,26 +202,19 @@ button[type=roll]:hover,
 .sheet-inline-options,
 .sheet-hint,
 .sheet-options-flag:checked ~ .sheet-display,
-.sheet-options-flag:checked ~ .sheet-skills-pyramid .sheet-display,
-.sheet-rollable-flag-true,
-.sheet-rollable-flag:checked ~ .sheet-skills-pyramid .sheet-rollable-flag-false,
-.sheet-ladder-rollable-true {
+.sheet-rollable-flag-true{
     display: none;
 }
 
 .sheet-display,
 .sheet-hints-flag:checked ~ .sheet-hint,
 .sheet-options-flag:checked ~ .sheet-options,
-.sheet-options-flag:checked ~ .sheet-skills-pyramid .sheet-options,
-.sheet-rollable-flag-false,
-.sheet-rollable-flag:checked ~ .sheet-skills-pyramid .sheet-rollable-flag-true,
-.sheet-ladder-rollable:checked ~ .sheet-ladder-rollable-true {
+.sheet-rollable-flag-false{
     display: block;
 }
 
 .sheet-inline-display,
-.sheet-options-flag:checked ~ .sheet-inline-options,
-.sheet-options-flag:checked ~ .sheet-skills-pyramid .sheet-inline-options {
+.sheet-options-flag:checked ~ .sheet-inline-options {
     display: inline-block;
 }
 
@@ -448,12 +354,6 @@ button[type=roll]:hover,
     height: 64px;
 }
 
-.sheet-section-id-logo {
-    width: 200px;
-    vertical-align: middle;
-    margin: 50px 15px 0 0px;
-}
-
 .sheet-section-id-info {
     max-width: 100%;
 }
@@ -493,10 +393,24 @@ button[type=roll]:hover,
 
 /* === STATS AND SKILLS === */
 
-.stat-header label{
-    font-size: medium; 
+.sheet-section-skills{
+    border: 15px solid transparent;
+    border-image: url("border.png") 30;
+    background-image: url("sheets.png");
+    background-size: 70%
+}
+
+.sheet-section-skills .sheet-col{
+   align-items: center; 
+   justify-content: center;
+}
+
+.stat-header{
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-weight: bold;
-    
+    text-align: center;
+    width:100%;
 }
 
 .stat-header input[type=number]{
@@ -505,7 +419,6 @@ button[type=roll]:hover,
     box-sizing: border-box; 
     border: transparent; 
     background-color: transparent;
-    font-size: large;
 }
 
 .stat-header input[type=number]::-webkit-inner-spin-button, 
@@ -518,140 +431,71 @@ input[type=number]::-webkit-outer-spin-button{
     display: grid;
     grid-template-columns: 100px 1fr;
     gap: 2px 1px;
-    max-width: 100px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .container-skill input[type="number"]{
     width: 30px;
 }
 
-
-/* === STUNTS === */
-.sheet-section-stunt {
-    padding-right: 2.5px
-}
-
-span.sheet-check-label + input[type="checkbox"] {
-    margin-left: -2.5px;
-}
-
-input[type="checkbox"] + span.sheet-check-label {
-    margin-left: -2.5px;
-}
-
-.sheet-stunt-bonus,
-.sheet-stunt-action {
-    display: none;
-}
-
-.sheet-stunt-type[value="1"] ~ .sheet-stunt-action,
-.sheet-stunt-type[value="2"] ~ .sheet-stunt-action,
-.sheet-stunt-type[value="2"] ~ .sheet-stunt-bonus {
-    display: block;
-}
-
 /* === STRESS === */
-.sheet-section-extras {
-    padding-left: 2.5px
+
+.sheet-status{
+    padding-left: 20px
 }
 
-span.sheet-stress-header-name {
+span.sheet-status-header-name {
     font-weight: bold;
     font-size: 150%;
+    text-align: center;
 }
 
-span.sheet-stress-header-skill::before {
-    content: "(";
-}
-
-span.sheet-stress-header-skill:empty::before {
-    content: "";
-}
-
-span.sheet-stress-header-skill::after {
-    content: ")";
-}
-
-span.sheet-stress-header-skill:empty:after {
-    content: "";
-}
-
-.sheet-stress-row input[type="checkbox"] {
-    display: none;
-}
-
-.sheet-stress-row input[type="checkbox"][value="1"],
-.sheet-stress-row input[type="hidden"][value="2"] ~ input[type="checkbox"][value="2"],
-.sheet-stress-row input[type="hidden"][value="3"] ~ input[type="checkbox"][value="2"],
-.sheet-stress-row input[type="hidden"][value="3"] ~ input[type="checkbox"][value="3"],
-.sheet-stress-row input[type="hidden"][value="4"] ~ input[type="checkbox"][value="2"],
-.sheet-stress-row input[type="hidden"][value="4"] ~ input[type="checkbox"][value="3"],
-.sheet-stress-row input[type="hidden"][value="4"] ~ input[type="checkbox"][value="4"],
-.sheet-stress-row input[type="hidden"][value="5"] ~ input[type="checkbox"][value="2"],
-.sheet-stress-row input[type="hidden"][value="5"] ~ input[type="checkbox"][value="3"],
-.sheet-stress-row input[type="hidden"][value="5"] ~ input[type="checkbox"][value="4"],
-.sheet-stress-row input[type="hidden"][value="5"] ~ input[type="checkbox"][value="5"],
-.sheet-stress-row input[type="hidden"][value="6"] ~ input[type="checkbox"][value="2"],
-.sheet-stress-row input[type="hidden"][value="6"] ~ input[type="checkbox"][value="3"],
-.sheet-stress-row input[type="hidden"][value="6"] ~ input[type="checkbox"][value="4"],
-.sheet-stress-row input[type="hidden"][value="6"] ~ input[type="checkbox"][value="5"],
-.sheet-stress-row input[type="hidden"][value="6"] ~ input[type="checkbox"][value="6"],
-.sheet-stress-row input[type="hidden"][value="7"] ~ input[type="checkbox"][value="2"],
-.sheet-stress-row input[type="hidden"][value="7"] ~ input[type="checkbox"][value="3"],
-.sheet-stress-row input[type="hidden"][value="7"] ~ input[type="checkbox"][value="4"],
-.sheet-stress-row input[type="hidden"][value="7"] ~ input[type="checkbox"][value="5"],
-.sheet-stress-row input[type="hidden"][value="7"] ~ input[type="checkbox"][value="6"],
-.sheet-stress-row input[type="hidden"][value="7"] ~ input[type="checkbox"][value="7"],
-.sheet-stress-row input[type="hidden"][value="8"] ~ input[type="checkbox"][value="2"],
-.sheet-stress-row input[type="hidden"][value="8"] ~ input[type="checkbox"][value="3"],
-.sheet-stress-row input[type="hidden"][value="8"] ~ input[type="checkbox"][value="4"],
-.sheet-stress-row input[type="hidden"][value="8"] ~ input[type="checkbox"][value="5"],
-.sheet-stress-row input[type="hidden"][value="8"] ~ input[type="checkbox"][value="6"],
-.sheet-stress-row input[type="hidden"][value="8"] ~ input[type="checkbox"][value="7"],
-.sheet-stress-row input[type="hidden"][value="8"] ~ input[type="checkbox"][value="8"] {
+.sheet-status-row input[type="checkbox"][value="1"],
+.sheet-status-row input[type="checkbox"][value="2"],
+.sheet-status-row input[type="checkbox"][value="3"],
+.sheet-status-row input[type="checkbox"][value="4"]{
     display: inline-block;
     zoom: 150%;
     margin-right: 5px;
     margin-top: 2.5px;
 }
 
-.sheet-stress-row input[type="checkbox"]::before {
+.sheet-status-row input[type="checkbox"]::before {
     margin-left: -2.5px;
     top: -5px;
     position: relative;
     font-weight: bold;
 }
 
-.sheet-stress-row input[type="checkbox"][value="1"]::before {
+.sheet-status-row input[type="checkbox"][value="1"]::before {
     content: "1";
 }
 
-.sheet-stress-row input[type="checkbox"][value="2"]::before {
+.sheet-status-row input[type="checkbox"][value="2"]::before {
     content: "2";
 }
 
-.sheet-stress-row input[type="checkbox"][value="3"]::before {
+.sheet-status-row input[type="checkbox"][value="3"]::before {
     content: "3";
 }
 
-.sheet-stress-row input[type="checkbox"][value="4"]::before {
+.sheet-status-row input[type="checkbox"][value="4"]::before {
     content: "4";
 }
 
-.sheet-stress-row input[type="checkbox"][value="5"]::before {
+.sheet-status-row input[type="checkbox"][value="5"]::before {
     content: "5";
 }
 
-.sheet-stress-row input[type="checkbox"][value="6"]::before {
+.sheet-status-row input[type="checkbox"][value="6"]::before {
     content: "6";
 }
 
-.sheet-stress-row input[type="checkbox"][value="7"]::before {
+.sheet-status-row input[type="checkbox"][value="7"]::before {
     content: "7";
 }
 
-.sheet-stress-row input[type="checkbox"][value="8"]::before {
+.sheet-status-row input[type="checkbox"][value="8"]::before {
     content: "8";
 }
 
@@ -723,6 +567,32 @@ span.sheet-stress-header-skill:empty:after {
 .sheet-section-conditions .sheet-conditions-group2 input.sheet-conditions-filter[type="hidden"][value="2"] ~ .sheet-conditions-row,
 .sheet-section-conditions .sheet-conditions-group1 input.sheet-conditions-filter[type="hidden"][value="1"] ~ .sheet-conditions-row {
     display: flex;
+}
+
+/* === WEAPONS === */
+
+.sheet-section-weapons{
+    padding-left: 20px;
+
+}
+
+.sheet-section-weapons select{
+    width:20%
+}
+
+.sheet-section-weapons input{
+    width:30%
+}
+
+.sheet-section-weapons textarea{
+    height: 50px
+}
+
+.section-weapon{
+    border: 15px solid transparent;
+    border-image: url("border.png") 30;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 /* === ROLL TEMPLATE === */
