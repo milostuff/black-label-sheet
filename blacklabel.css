@@ -1,6 +1,7 @@
 .sheet-container {
     position: relative;
-    background-image: url(https://raw.github.com/milostuff/black-label-sheet/main/paper.jpg);
+    background-image: url(https://raw.github.com/milostuff/black-label-sheet/main/doodles.png), 
+    url(https://raw.github.com/milostuff/black-label-sheet/main/paper.jpg);
     background-size: contain;
     border: solid 5px;
     padding: 10px;
@@ -395,9 +396,9 @@ button[type=roll]:hover,
 
 .sheet-section-skills{
     border: 15px solid transparent;
-    border-image: url("border.png") 30;
-    background-image: url("sheets.png");
-    background-size: 70%
+    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/border.png") 30;
+    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/sheets.png");
+    background-size: 200px
 }
 
 .sheet-section-skills .sheet-col{
@@ -440,15 +441,51 @@ input[type=number]::-webkit-outer-spin-button{
 
 /* === STRESS === */
 
-.sheet-status{
-    padding-left: 20px
+.sheet-status-header{
+    width: 100%;
+    font-weight: bold;
+    font-size: 125%;
 }
 
-span.sheet-status-header-name {
-    font-weight: bold;
-    font-size: 150%;
-    text-align: center;
+.sheet-status{
+    border: 10px solid transparent;
+    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/border.png") 30;
+
+    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/sheets.png");
+    background-size: 200px;
+    position: relative;
 }
+
+.sheet-stress{
+    width: 50%;
+    height: 150px;
+    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/stress.png");
+    background-size: 100px;
+    background-repeat: no-repeat;
+
+    text-align: right;
+
+    border: 5px solid transparent;
+    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/border.png") 30;
+}
+
+.sheet-stress .sheet-status-header{
+    padding-top: 90px;
+}
+
+
+.sheet-sanity{
+    width: 50%;
+    height: 150px;
+    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/sanity.png");
+    background-size: 85px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+
+    border: 5px solid transparent;
+    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/border.png") 30;
+}
+
 
 .sheet-status-row input[type="checkbox"][value="1"],
 .sheet-status-row input[type="checkbox"][value="2"],
@@ -574,6 +611,10 @@ span.sheet-status-header-name {
 .sheet-section-weapons{
     padding-left: 20px;
 
+    background-image: url(https://raw.github.com/milostuff/black-label-sheet/main/dagger.png);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: right 10px;
 }
 
 .sheet-section-weapons select{
@@ -589,10 +630,18 @@ span.sheet-status-header-name {
 }
 
 .section-weapon{
-    border: 15px solid transparent;
-    border-image: url("border.png") 30;
     padding: 10px;
     margin-bottom: 10px;
+
+    border: 15px solid transparent;
+    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/border.png") 30;
+}
+
+/* === NOTES === */
+
+.sheet-section-notes{
+    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/sheets.png");
+    background-size: 200px;
 }
 
 /* === ROLL TEMPLATE === */
