@@ -88,19 +88,16 @@
     -->
         
     <div class="sheet-section-skills sheet-section sheet-half">
-        <div class="sheet-header">
-            <span>Stats and Skills</span>
-        </div>
 
-        <div class="sheet-row" style="padding-top:10px; padding-left: 7px;">
-
-            <div class="sheet-col">
+            <div class="section-skills sheet-row">
                     
-                <div class="stat-header" style="padding-left: 35px">
-                    <span>Body (<input type="number" name="attr_stat_body" value="0"/>)</span>
-                </div>
+                <div class="sheet-col">
 
-                <div class="container-skill">
+                    <div class="stat-header">
+                    <span>Body (<input type="number" name="attr_stat_body" value="0"/>)</span>
+                    </div>
+
+                     <div class="container-skill">
                         
                     <span>Strength</span>
                     <input type="number" name="attr_skill_str" value="0" />
@@ -109,62 +106,68 @@
                     <span>Vigor</span>
                     <input type="number" name="attr_skill_vig" value="0" />
 
+                    </div>
+
+                </div>
+
+                <div class="sheet-col">
+
+                    <div class="stat-header">
+                        <span>Technique (<input type="number" name="attr_stat_tech" value="0"/>)</span>
+                    </div>
+
+                    <div class="container-skill">
+                        <span>Acrobratics</span>
+                        <input type="number" name="attr_skill_acr" value="0" />
+                        <span>Finesse</span>
+                        <input type="number" name="attr_skill_fin" value="0" />
+                        <span>Control</span>
+                        <input type="number" name="attr_skill_cont" value="0" />
+                    </div>
+
                 </div>
 
             </div>
 
-            <div class="sheet-col">
 
-                <div class="stat-header" style="padding-left: 5px">
-                    <span>Technique (<input type="number" name="attr_stat_tech" value="0"/>)</span>
+            <div class="sheet-row">
+
+                <div class="sheet-col">
+
+                    <div class="stat-header">
+                        <span>Presence (<input type="number" name="attr_stat_pres" value="0" />)</span>
+                    </div>
+
+                    <div class="container-skill">
+                        
+                        <span>Rapport</span>
+                        <input type="number" name="attr_skill_rap" value="0" />
+                        <span>Menace</span>
+                        <input type="number" name="attr_skill_men" value="0" />
+                        <span>Convince</span>
+                        <input type="number" name="attr_skill_con" value="0" />
+                    </div>
+
                 </div>
 
-                <div class="container-skill">
-                    <span>Acrobratics</span>
-                    <input type="number" name="attr_skill_acr" value="0" />
-                    <span>Finesse</span>
-                    <input type="number" name="attr_skill_fin" value="0" />
-                    <span>Control</span>
-                    <input type="number" name="attr_skill_cont" value="0" />
-                </div>
+                <div class="sheet-col">
 
-            </div>
-
-            <div class="sheet-col">
-
-                <div class="stat-header" style="padding-left: 15px">
-                    <span>Presence (<input type="number" name="attr_stat_pres" value="0" />)</span>
-                </div>
-
-                <div class="container-skill">
+                    <div class="stat-header">
+                        <span>Mind (<input type="number" name="attr_stat_mind" value="0"/>)</span>
+                    </div>
                     
-                    <span>Rapport</span>
-                    <input type="number" name="attr_skill_rap" value="0" />
-                    <span>Menace</span>
-                    <input type="number" name="attr_skill_men" value="0" />
-                    <span>Convince</span>
-                    <input type="number" name="attr_skill_con" value="0" />
+                    <div class="container-skill">
+
+                        <span>Empathy</span>
+                        <input type="number" name="attr_skill_emp" value="0" />
+                        <span>Lore</span>
+                        <input type="number" name="attr_skill_lore" value="0" />
+                        <span>Insight</span>
+                        <input type="number" name="attr_skill_ins" value="0" />
+                    </div>
                 </div>
+
             </div>
-
-            <div class="sheet-col col-wrap">
-
-                <div class="stat-header" style="padding-left: 35px">
-                    <span>Mind (<input type="number" name="attr_stat_mind" value="0"/>)</span>
-                </div>
-                
-                <div class="container-skill">
-
-                    <span>Empathy</span>
-                    <input type="number" name="attr_skill_emp" value="0" />
-                    <span>Lore</span>
-                    <input type="number" name="attr_skill_lore" value="0" />
-                    <span>Insight</span>
-                    <input type="number" name="attr_skill_ins" value="0" />
-                </div>
-            </div>
-
-        </div>
 
     </div>
 
@@ -172,16 +175,23 @@
         1. Speed, proficiency, what else? currency?
     -->
 
-    <div class="sheet-section-mechanics2 sheet-section sheet-quarter">
-        <div class="sheet-header">
-            Mechanics
-        </div>
+    <div class="sheet-section-rolls sheet-section sheet-quarter">
 
-        <button type="roll" class="sheet-action-button" name="roll_strength" value="&{template:default} {{name=Duality}} 
-                {{Hope=$[[0.computed]]}} {{Fear=$[[38.computed]]}} [[[ [[0]] {{Critical!}} ]]]
-                {{Total=[[ [[?{Advantage|Regular,1d12|Advantage,2d12kh1|Disadvantage,2d12kl1}[Hope] ]] + [[1d12[Fear] ]] + ?{Modifier?|0} ]]}}">
-                <span>Roll 2d12</span>
-        </button>
+        <img src="https://raw.github.com/milostuff/black-label-sheet/main/dice.png" width="128" height="128">
+
+        <div class="sheet-col">
+
+            <button type="roll" class="roll_daggerheart_d12" name="roll_strength" value="&{template:default} {{name=Duality}} 
+            {{Hope=$[[0.computed]]}} {{Fear=$[[38.computed]]}} [[[ [[0]] {{Critical!}} ]]]
+            {{Total=[[ [[?{Advantage|Regular,1d12|Advantage,2d12kh1|Disadvantage,2d12kl1}[Hope] ]] + [[1d12[Fear] ]] + ?{Modifier?|0} ]]}}">
+            Roll 2d12</button>
+            
+            <button type="roll" name="roll_primary_weapon_damage" value="&{template:default} {{name=@{primary_weapon_name} Damage}} {{Roll=[[@{proficiency}@{primary_weapon_damage_die} + @{primary_weapon_damage_bonus}]]}} {{Type=@{primary_weapon_damage_type}}}">
+                Primary Weapon Damage</button>
+
+            <button type="roll" name="roll_secondary_weapon_damage" value="&{template:default} {{name=@{secondary_weapon_name} Damage}} {{Roll=[[@{proficiency}@{secondary_weapon_damage_die} + @{secondary_weapon_damage_bonus}]]}} {{Type=@{secondary_weapon_damage_type}}}">Secondary Weapon Damage</button>
+        
+        </div>
 
     </div>
 
@@ -283,48 +293,47 @@
 
     <div class="sheet-break"></div>
 
-    <!--STRESS SECTION: 
+    <!--STATUS SECTION: 
         1. Make it so that stress and sanity are default to 4 and does not show up as the edit view in default 
     -->
 
-    <div class="sheet-section-stress sheet-section sheet-half">
-        <div class="sheet-header">
-            <span>Status</span>
-            <div class="sheet-section-options">
-                <button type="action" name="act_clearStress" >
-                    <span>#</span>
-                </button>
-            </div>
-        </div>
+    <div class="sheet-section-status sheet-section sheet-quarter">
 
-            <div class="sheet-stress-header">
-                <span class="sheet-stress-header-name" name="attr_status_stress">Stress</span>
-            </div>
-            <div class="sheet-stress-row">
+        <div class="sheet-status">
+
+            <div class="sheet-stress sheet-col">
+
+                <div class="sheet-status-header">
+                <span class="sheet-status-header-name" name="attr_status_stress">Stress</span>
+                </div>
+
+                <div class="sheet-status-row">
                 <input type="hidden" name="attr_stress_usable" />
                 <input type="checkbox" name="attr_stress_isUsed1" title="1" value=1 />
                 <input type="checkbox" name="attr_stress_isUsed2" title="2" value=2 />
                 <input type="checkbox" name="attr_stress_isUsed3" title="3" value=3 />
                 <input type="checkbox" name="attr_stress_isUsed4" title="4" value=4 />
-            </div>
-
-            <div class="sheet-stress-header">
-                <span class="sheet-stress-header-name" name="attr_status_sanity">Sanity</span>
-            </div>
-            <div class="sheet-stress-row">
-                <input type="hidden" name="attr_sanity_usable" />
-                <input type="checkbox" name="attr_sanity_isUsed1" title="1" value=1 />
-                <input type="checkbox" name="attr_sanity_isUsed2" title="2" value=2 />
-                <input type="checkbox" name="attr_sanity_isUsed3" title="3" value=3 />
-                <input type="checkbox" name="attr_sanity_isUsed4" title="4" value=4 />
-            </div>
-
-            <div class="sheet-row">
-                <div class="sheet-stress-header">
-                <span class="sheet-stress-header-name" name="attr_status_sanity">Enlightenment</span>
                 </div>
-                <input type="number" name="attr_status_enlight" style="width: 20%">
+
             </div>
+
+            <div class="sheet-sanity sheet-col">
+
+                <div class="sheet-status-header">
+                <span class="sheet-status-header-name" name="attr_status_sanity">Sanity</span>
+                </div>
+
+                <div class="sheet-status-row">
+                    <input type="hidden" name="attr_sanity_usable" />
+                    <input type="checkbox" name="attr_sanity_isUsed1" title="1" value=1 />
+                    <input type="checkbox" name="attr_sanity_isUsed2" title="2" value=2 />
+                    <input type="checkbox" name="attr_sanity_isUsed3" title="3" value=3 />
+                    <input type="checkbox" name="attr_sanity_isUsed4" title="4" value=4 />
+                </div>
+                
+            </div>
+
+        </div>
             
     </div>
 
@@ -333,7 +342,7 @@
     -->
     <input class="sheet-conditions-flag sheet-hidden" type="checkbox" name="attr_show_conditions_flag" value="1" />
 
-    <div class="sheet-section-consequences sheet-section sheet-half">
+    <div class="sheet-section-consequences sheet-section sheet-threequarters">
         <div class="sheet-header">
             <span>Conditions</span>
         </div>
@@ -367,12 +376,111 @@
     </div>
     
     <div class="sheet-break"></div>
+
+    <!--WEAPONS SECTION:
+        1. Primary and Secondary weapons (name, trait/range, type, feature, damage dice)
+        2. Add rolls to hit and to damage 
+    -->
+
+    <div class="sheet-section-weapons sheet-section sheet-threequarters">
+
+        <div class="section-weapon">
+
+            <h3>Primary Weapon</h3>
+
+            <div class="section_primary_weapon sheet-row" style="gap: 5px">
+
+                <input type="text" name="attr_primary_weapon_name" placeholder="Name" />
+                <input type="text" name="attr_primary_weapon_trait" placeholder="Trait" />
+                <input type="text" name="attr_primary_weapon_range" placeholder="Range" />
+                <input type="text" name="attr_primary_weapon_type" placeholder="Type" />
+
+                <select name="attr_primary_weapon_damage_die">
+                    <option value="" disabled selected hidden>Damage</option>
+                    <option value="1d4">1d4</option>
+                    <option value="1d6">1d6</option>
+                    <option value="1d8">1d8</option>
+                    <option value="1d10">1d10</option>
+                    <option value="1d12">1d12</option>
+                    <option value="1d20">1d20</option>
+                </select>
+
+
+                <span class="sheet-plus-sign">+</span>
+                
+                <select name="attr_primary_weapon_damage_bonus">
+                    <option value="" disabled selected hidden>Bonus</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+
+                <textarea name="attr_primary_weapon_feature" placeholder="Feature"></textarea>
+            
+            </div>
+
+        </div>
+
+        <div class="section-weapon">
+
+            <h3>Secondary Weapon</h3>
+
+            <div class="section_secondary_weapon sheet-row" style="gap: 5px">
+
+                <input type="text" name="attr_secondary_weapon_name" placeholder="Name" />
+                <input type="text" name="attr_secondary_weapon_trait" placeholder="Trait" />
+                <input type="text" name="attr_secondary_weapon_range" placeholder="Range" />
+                <input type="text" name="attr_secondary_weapon_type" placeholder="Type" />
+
+                <select name="attr_secondary_weapon_amage_die">
+                    <option value="" disabled selected hidden>Damage</option>
+                    <option value="1d4">1d4</option>
+                    <option value="1d6">1d6</option>
+                    <option value="1d8">1d8</option>
+                    <option value="1d10">1d10</option>
+                    <option value="1d12">1d12</option>
+                    <option value="1d20">1d20</option>
+                </select>
+
+
+                <span class="sheet-plus-sign">+</span>
+                
+                <select name="attr_secondary_weapon_damage_bonus">
+                    <option value="" disabled selected hidden>Bonus</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+
+                <textarea name="attr_secondary_weapon_feature" placeholder="Feature"></textarea>
+
+            </div>
+
+        </div>
+
+    </div>
     
     <!--INVENTORY SECTION:-->
 
     <div class="sheet-section-inventory sheet-section sheet-quarter">
         <div class="sheet-header">
-            <span>Inventory and Equipment</span>
+            <span>Inventory</span>
         </div>
         <fieldset class="repeating_inventory">
             <input type="number" name="attr_invent_qty" placeholder="Qty" style="width:25%"/>
@@ -380,104 +488,6 @@
         </fieldset>
     </div>
     
-    <!--WEAPONS SECTION:
-        1. Primary and Secondary weapons (name, trait/range, type, feature, damage dice)
-        2. Add rolls to hit and to damage 
-
-        1. Show weapon roll and damage when pressed
-        2. Damage and Bonus does not show up auhhuhuh
-        3. Have an option to set weapon to active/inactive and primary/secondary
-    
-    -->
-
-    <div class="sheet-section-weapons sheet-section sheet-threequarters">
-        <div class="sheet-header">
-            <span>Active Weapons</span>
-        </div>
-
-        <h3>Primary Weapon</h3>
-
-            <div class="section_primary_weapon sheet-row" style="gap: 5px">
-
-            <input type="text" name="attr_primary_weapon_name" placeholder="Name" />
-            <input type="text" name="attr_primary_weapon_trait" placeholder="Trait" />
-            <input type="text" name="attr_primary_weapon_range" placeholder="Range" />
-            <input type="text" name="attr_primary_weapon_type" placeholder="Type" />
-
-            <select name="attr_primary_weapon_damage_die">
-                <option value="" disabled selected hidden>Damage</option>
-                <option value="1d4">1d4</option>
-                <option value="1d6">1d6</option>
-                <option value="1d8">1d8</option>
-                <option value="1d10">1d10</option>
-                <option value="1d12">1d12</option>
-                <option value="1d20">1d20</option>
-            </select>
-
-
-            <span class="sheet-plus-sign">+</span>
-            
-            <select name="attr_primary_weapon_damage_bonus">
-                <option value="" disabled selected hidden>Bonus</option>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-
-            <textarea name="attr_primary_weapon_feature" placeholder="Feature"></textarea>
-        
-            </div>
-
-            <h3>Secondary Weapon</h3>
-
-            <div class="section_secondary_weapon sheet-row" style="gap: 5px">
-
-                <input type="text" name="attr_secondary_weapon_name" placeholder="Name" />
-            <input type="text" name="attr_secondary_weapon_trait" placeholder="Trait" />
-            <input type="text" name="attr_secondary_weapon_range" placeholder="Range" />
-            <input type="text" name="attr_secondary_weapon_type" placeholder="Type" />
-
-            <select name="attr_secondary_weapon_amage_die">
-                <option value="" disabled selected hidden>Damage</option>
-                <option value="1d4">1d4</option>
-                <option value="1d6">1d6</option>
-                <option value="1d8">1d8</option>
-                <option value="1d10">1d10</option>
-                <option value="1d12">1d12</option>
-                <option value="1d20">1d20</option>
-            </select>
-
-
-            <span class="sheet-plus-sign">+</span>
-            
-            <select name="attr_secondary_weapon_damage_bonus">
-                <option value="" disabled selected hidden>Bonus</option>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-
-            <textarea name="attr_secondary_weapon_feature" placeholder="Feature"></textarea>
-
-            </div>
-
-    </div>
 
     <div class="sheet-break"></div>
 
