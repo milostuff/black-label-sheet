@@ -102,7 +102,7 @@ button[type=roll] {
     box-shadow: none;
     padding: 0px;
     margin: 0px;
-    width: 100%;
+    width: 60%;
     font-weight: bold;
     text-align: left;
 }
@@ -136,11 +136,6 @@ button[type=roll]::before {
     position: absolute;
     top: 0px;
     right: 0px;
-}
-
-button[type=roll]:hover,
-.sheet-section-options button[type="action"]:hover {
-    color: #EC2127;
 }
 
 .sheet-section-options,
@@ -302,6 +297,13 @@ button[type=roll]:hover,
 
 
 /* === MECHANICS === */
+
+.sheet-section-mechanics{
+    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/stroke1.png");
+    background-size: 150%;
+    background-repeat: no-repeat;
+}
+
 .sheet-section-mechanics input[type=number]{
     height: 40px;
     width: 20%;
@@ -445,7 +447,7 @@ input[type=number]::-webkit-outer-spin-button{
 /* === ROLLS === */
 
 .sheet-section-rolls img{
-    width: 100%
+    width: 150px
 }
 
 /* === STRESS === */
@@ -647,6 +649,14 @@ input[type=number]::-webkit-outer-spin-button{
 
     border: 15px solid transparent;
     border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/border.png") 30;
+}
+
+/* === INVENTORY === */
+
+.sheet-section-inventory{
+    background-image: url(https://raw.github.com/milostuff/black-label-sheet/main/stroke1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 /* === NOTES === */
