@@ -5,9 +5,7 @@
 </head>
 
 <div class="sheet-container">
-    <!--MECHANICS SECTION: 
-        1. Find a way to connect the stats to the token
-    -->
+    <!--MECHANICS SECTION: DONE -->
 
     <div class="sheet-section-mechanics sheet-section sheet-quarter">
 
@@ -79,6 +77,11 @@
                 <div class="sheet-repitem">
                     <span>Level</span>
                     <input type="number" name="attr_id_level" placeholder="0" />
+                </div>
+
+                <div class="sheet-repitem" style="padding-top: 10px;">
+                    <span>Proficiency</span>
+                    <input type="number" name="attr_proficiency" placeholder="0" />
                 </div>
             </div>
     </div>
@@ -177,20 +180,28 @@
 
     <div class="sheet-section-rolls sheet-section sheet-quarter">
 
-        <img src="https://raw.github.com/milostuff/black-label-sheet/main/dice.png" width="128" height="128">
+        <div class="sheet-col" style="padding: 20px; padding-right: 20px">
 
-        <div class="sheet-col">
-
-            <button type="roll" class="roll_daggerheart_d12" name="roll_strength" value="&{template:default} {{name=Duality}} 
-            {{Hope=$[[0.computed]]}} {{Fear=$[[38.computed]]}} [[[ [[0]] {{Critical!}} ]]]
-            {{Total=[[ [[?{Advantage|Regular,1d12|Advantage,2d12kh1|Disadvantage,2d12kl1}[Hope] ]] + [[1d12[Fear] ]] + ?{Modifier?|0} ]]}}">
-            Roll 2d12</button>
             
-            <button type="roll" name="roll_primary_weapon_damage" value="&{template:default} {{name=@{primary_weapon_name} Damage}} {{Roll=[[@{proficiency}@{primary_weapon_damage_die} + @{primary_weapon_damage_bonus}]]}} {{Type=@{primary_weapon_damage_type}}}">
-                Primary Weapon Damage</button>
+            <button type="roll" name="roll_daggerheart_d12" value="&{template:default} {{name=
+[[[ $[[13]][Boon] + $[[52]][Dread] ?{Advantage|Regular, |Advantage,+ 1d6|Disadvantage,- 1d6} +(?{Modifier?|0}) ]]]
+$[[$[[66]]]] [[[[[ [[ {0,$[[25]]}=$[[65]]*79 ]] 
+$[[$[[0]]]]  [[1d12 Boon]] [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ 0 ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]]
+[[12]][[11]][[10]][[9]][[8]][[7]][[6]][[5]][[4]][[3]][[2]][[1]]
+[[12]][[11]][[10]][[9]][[8]][[7]][[6]][[5]][[4]][[3]][[2]][[1]]
+$[[37]] [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ 0 ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]]
+$[[$[[39]]]] [[ [[1d12 Dread]]+39 ]] [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ 0 ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]]
+[[12]][[11]][[10]][[9]][[8]][[7]][[6]][[5]][[4]][[3]][[2]][[1]]
+[[12]][[11]][[10]][[9]][[8]][[7]][[6]][[5]][[4]][[3]][[2]][[1]]
+$[[78]] [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ 0 ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]]
+]]]]]
+}} {{name=Duality}} {{Boon=$[[0.computed]]}} {{Dread=$[[38.computed]]}} [[[ [[0]] {{Critical!}} ]]] {{Total=$[[53.computed]]}}">
 
-            <button type="roll" name="roll_secondary_weapon_damage" value="&{template:default} {{name=@{secondary_weapon_name} Damage}} {{Roll=[[@{proficiency}@{secondary_weapon_damage_die} + @{secondary_weapon_damage_bonus}]]}} {{Type=@{secondary_weapon_damage_type}}}">Secondary Weapon Damage</button>
-        
+            <img src="D12.png"> </button>
+
+            <button type="roll" name="roll_primary_weapon_damage" value="&{template:default} {{name=@{primary_weapon_name} Damage}} {{Roll=[[@{proficiency}@{primary_weapon_damage_die} + @{primary_weapon_damage_bonus}]]}} {{Type=@{primary_weapon_type}}}">Primary Weapon Damage</button>
+            <button type="roll" name="roll_secondary_weapon_damage" value="&{template:default} {{name=@{secondary_weapon_name} Damage}} {{Roll=[[@{proficiency}@{secondary_weapon_damage_die} + @{secondary_weapon_damage_bonus}]]}} {{Type=@{secondary_weapon_type}}}">Secondary Weapon Damage</button>
+
         </div>
 
     </div>
@@ -265,7 +276,7 @@
                 <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_more_flag" checked="checked" />
                 <div class="sheet-display">
                     <h3 class="sheet-right-buttons">
-                        <button type="roll" class="sheet-action-button" name="roll_keywords" value="&{template:keywords} {{keyword=@{key_name}}} {{source=@{key_source}}} {{description=@{key_desc}}}">
+                        <button type="roll" class="sheet-action-button" name="roll_keywords" value="&{template:default} {{name=@{key_name}}} {{source=@{key_source}}} {{description=@{key_desc}}}">
                             <span name="attr_key_name"></span>
                         </button>
                     </h3>
@@ -280,7 +291,7 @@
                 </div>
                 <div class="sheet-options">
                     <h3 class="sheet-right-buttons">
-                        <button type="roll" class="sheet-action-button sheet-tooltip" name="roll_keywords" value="&{template:keywords} {{keyword=@{key_name}}} {{source=@{key_source}}} {{description=@{key_desc}}}">
+                        <button type="roll" class="sheet-action-button sheet-tooltip" name="roll_keywords" value="&{template:default} {{name=@{key_name}}} {{source=@{key_source}}} {{description=@{key_desc}}}">
                             <span name="attr_key_name"></span>
                             <span name="attr_key_source"></span>
                             <span name="attr_key_desc" class="sheet-tooltipText sheet-keep-whitespace"></span>

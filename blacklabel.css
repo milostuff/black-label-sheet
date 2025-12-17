@@ -309,7 +309,6 @@ button[type=roll]:hover,
     font-size: large;
 }
 
-
 .mechanics-container{
     border-style: transparent;
     position: relative;
@@ -445,19 +444,8 @@ input[type=number]::-webkit-outer-spin-button{
 
 /* === ROLLS === */
 
-.sheet-section-rolls{
-    text-align: center;
-}
-
-.sheet-section-rolls button { 
-    width: 100%;
-    padding: 12px; /* Larger padding for a more substantial button */
-    background: black; /* Earthy brown gradient */
-    color: white; /* Parchment-like text */
-    border: 2px solid black; /* Darker brown border */
-    text-align: center;
-    margin-top: 10px;
-    font-size: smaller;
+.sheet-section-rolls img{
+    width: 100%
 }
 
 /* === STRESS === */
