@@ -5,536 +5,574 @@
 </head>
 
 <div class="sheet-container">
-    <!--MECHANICS SECTION: DONE -->
+    <div class="main-content">
 
-    <div class="sheet-section-mechanics sheet-section sheet-quarter">
+        <!--MECHANICS SECTION: DONE -->
 
-            <div class="sheet-row" style="padding-left: 5px;">
+        <div class="sheet-section-mechanics sheet-section sheet-quarter">
 
-                <div class="mechanics-container">
+                <div class="sheet-row" style="padding-left: 5px;">
 
-                    <img src="https://raw.github.com/milostuff/black-label-sheet/main/hp.png" alt="hp" style="width:150px; height: 150px;">
+                    <div class="mechanics-container">
 
-                    <input type="number" name="attr_hp" value="0"/>
+                        <img src="https://raw.github.com/milostuff/black-label-sheet/main/hp.png" alt="hp" style="width:150px; height: 150px;">
 
-                    <div class="circle">
-                        <input type="number" name="attr_hp" value="10"/>
+                        <input type="number" name="attr_hp" value="0"/>
+
+                        <div class="circle">
+                            <input type="number" name="attr_hp" value="10"/>
+                        </div>
+
+                    <div class="mechanics-container">
+
+                        <img src="https://raw.github.com/milostuff/black-label-sheet/main/shield.png" alt="shield" style="width:150px; height: 150px">
+
+                        <input type="number" name="attr_shield" value="0" style="left: 59px"/>
+
+                        <div class="circle">
+                            <input type="number" name="attr_shield" value="0"/>
+                        </div>
+
                     </div>
 
-                <div class="mechanics-container">
+                    <div class="mechanics-container" >
 
-                    <img src="https://raw.github.com/milostuff/black-label-sheet/main/shield.png" alt="shield" style="width:150px; height: 150px">
+                        <img src="https://raw.github.com/milostuff/black-label-sheet/main/bp.png" alt="bp" style="width:150px; height: 150px;">
 
-                    <input type="number" name="attr_shield" value="0" style="left: 59px"/>
+                        <input type="number" name="attr_bp" value="0"/>
 
-                    <div class="circle">
-                        <input type="number" name="attr_shield" value="0"/>
+                        <div class="circle">
+                            <input type="number" name="attr_bp" value="5"/>
+                        </div>
                     </div>
-
-                </div>
-
-                <div class="mechanics-container" >
-
-                    <img src="https://raw.github.com/milostuff/black-label-sheet/main/bp.png" alt="bp" style="width:150px; height: 150px;">
-
-                    <input type="number" name="attr_bp" value="0"/>
-
-                    <div class="circle">
-                        <input type="number" name="attr_bp" value="5"/>
-                    </div>
-                </div>
-            
-            </div>
-
-        </div>
-
-    </div>
-
-    <!--ID SECTION: DONE -->
-    <div class="sheet-section-id sheet-section sheet-threequarters">
-            
-            <div class="sheet-header">
-                <span>ID</span>
-            </div>
-
-            <input class="sheet-level-flag sheet-hidden" type="checkbox" name="attr_show_level_flag" value="1" checked />
-            <div class="sheet-section sheet-section-id-info">
-                <div class="sheet-repitem">
-                    <input type="text" name="attr_id_name" placeholder="Name" />
-                </div>
-
-                <div class="sheet-row">
-                    <input type="text" name="attr_id_past" placeholder="Past" style="width:45%"/>
-                    <input type="text" name="attr_id_discipline" placeholder="Discipline" style="width:50%"/>
-                </div>
                 
-                <div class="sheet-repitem">
-                    <textarea name="attr_id_description" placeholder="Description"></textarea>
-                </div>
-            </div>
-
-            <div class="sheet-section sheet-section-id-level">
-                <div class="sheet-repitem">
-                    <span>Level</span>
-                    <input type="number" name="attr_id_level" placeholder="0" />
-                </div>
-
-                <div class="sheet-repitem" style="padding-top: 10px;">
-                    <span>Proficiency</span>
-                    <input type="number" name="attr_proficiency" placeholder="0" />
-                </div>
-            </div>
-    </div>
-
-     <!--SKILLS SECTION: 
-        1. Add role dice for each skill (same dice, different modifiers) (Cant be achieved at least rn because of daggerheart dice system)
-    -->
-        
-    <div class="sheet-section-skills sheet-section sheet-half">
-
-            <div class="section-skills sheet-row">
-                    
-                <div class="sheet-col">
-
-                    <div class="stat-header">
-                    <span>Body (<input type="number" name="attr_stat_body" value="0"/>)</span>
-                    </div>
-
-                     <div class="container-skill">
-                        
-                    <span>Strength</span>
-                    <input type="number" name="attr_skill_str" value="0" />
-                    <span>Will</span>
-                    <input type="number" name="attr_skill_wil" value="0" />
-                    <span>Vigor</span>
-                    <input type="number" name="attr_skill_vig" value="0" />
-
-                    </div>
-
-                </div>
-
-                <div class="sheet-col">
-
-                    <div class="stat-header">
-                        <span>Technique (<input type="number" name="attr_stat_tech" value="0"/>)</span>
-                    </div>
-
-                    <div class="container-skill">
-                        <span>Acrobratics</span>
-                        <input type="number" name="attr_skill_acr" value="0" />
-                        <span>Finesse</span>
-                        <input type="number" name="attr_skill_fin" value="0" />
-                        <span>Control</span>
-                        <input type="number" name="attr_skill_cont" value="0" />
-                    </div>
-
                 </div>
 
             </div>
-
-
-            <div class="sheet-row">
-
-                <div class="sheet-col">
-
-                    <div class="stat-header">
-                        <span>Presence (<input type="number" name="attr_stat_pres" value="0" />)</span>
-                    </div>
-
-                    <div class="container-skill">
-                        
-                        <span>Rapport</span>
-                        <input type="number" name="attr_skill_rap" value="0" />
-                        <span>Menace</span>
-                        <input type="number" name="attr_skill_men" value="0" />
-                        <span>Convince</span>
-                        <input type="number" name="attr_skill_con" value="0" />
-                    </div>
-
-                </div>
-
-                <div class="sheet-col">
-
-                    <div class="stat-header">
-                        <span>Mind (<input type="number" name="attr_stat_mind" value="0"/>)</span>
-                    </div>
-                    
-                    <div class="container-skill">
-
-                        <span>Empathy</span>
-                        <input type="number" name="attr_skill_emp" value="0" />
-                        <span>Lore</span>
-                        <input type="number" name="attr_skill_lore" value="0" />
-                        <span>Insight</span>
-                        <input type="number" name="attr_skill_ins" value="0" />
-                    </div>
-                </div>
-
-            </div>
-
-    </div>
-
-    <!--MECHANICS 2 SECTION: 
-        1. Speed, proficiency, what else? currency?
-    -->
-
-    <div class="sheet-section-rolls sheet-section sheet-quarter">
-
-        <div class="sheet-col" style="padding: 20px; padding-right: 20px">
-
-            
-            <button type="roll" name="roll_daggerheart_d12" value="&{template:default} {{name=
-[[[ $[[13]][Boon] + $[[52]][Dread] ?{Advantage|Regular, |Advantage,+ 1d6|Disadvantage,- 1d6} +(?{Modifier?|0}) ]]]
-$[[$[[66]]]] [[[[[ [[ {0,$[[25]]}=$[[65]]*79 ]] 
-$[[$[[0]]]]  [[1d12 Boon]] [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ 0 ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]]
-[[12]][[11]][[10]][[9]][[8]][[7]][[6]][[5]][[4]][[3]][[2]][[1]]
-[[12]][[11]][[10]][[9]][[8]][[7]][[6]][[5]][[4]][[3]][[2]][[1]]
-$[[37]] [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ 0 ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]]
-$[[$[[39]]]] [[ [[1d12 Dread]]+39 ]] [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ 0 ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]]
-[[12]][[11]][[10]][[9]][[8]][[7]][[6]][[5]][[4]][[3]][[2]][[1]]
-[[12]][[11]][[10]][[9]][[8]][[7]][[6]][[5]][[4]][[3]][[2]][[1]]
-$[[78]] [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ 0 ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]]
-]]]]]
-}} {{name=Duality}} {{Boon=$[[0.computed]]}} {{Dread=$[[38.computed]]}} [[[ [[0]] {{Critical!}} ]]] {{Total=$[[53.computed]]}}">
-
-            <img src="https://raw.github.com/milostuff/black-label-sheet/main/D12.png"> </button>
-
-            <button type="roll" name="roll_primary_weapon_damage" value="&{template:default} {{name=@{primary_weapon_name} Damage}} {{Roll=[[@{proficiency}@{primary_weapon_damage_die} + @{primary_weapon_damage_bonus}]]}} {{Type=@{primary_weapon_type}}}">Primary Weapon Damage</button>
-            <button type="roll" name="roll_secondary_weapon_damage" value="&{template:default} {{name=@{secondary_weapon_name} Damage}} {{Roll=[[@{proficiency}@{secondary_weapon_damage_die} + @{secondary_weapon_damage_bonus}]]}} {{Type=@{secondary_weapon_type}}}">Secondary Weapon Damage</button>
 
         </div>
 
-    </div>
+        <!--ID SECTION: DONE -->
+        <div class="sheet-section-id sheet-section sheet-threequarters">
+                
+                <div class="sheet-header">
+                    <span>ID</span>
+                </div>
 
-    <div class="sheet-break"></div>
-
-    <!--BONUSES SECTION: DONE-->
-    <div class="sheet-section-bonuses sheet-section sheet-half">
-        <div class="sheet-header">
-            <span>Bonuses and Stunts</span>
-        </div>
-        <fieldset class="repeating_bonuses">
-            <div class="sheet-item-options">
-                <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
-                <div class="sheet-display">
-                    <input class="sheet-item-options-flag2" type="checkbox" name="attr_more_flag" checked="checked" />
-                    <span>E</span>
-                </div>
-                <input class="sheet-item-options-flag" type="checkbox" name="attr_options_flag" checked="checked" />
-                <span>p</span>
-            </div>
-            <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
-            <div class="sheet-options">
-                <input type="text" name="attr_bonus_name" placeholder="Name" />
-                <textarea name="attr_bonus_desc" placeholder="Description"></textarea>
-            </div>
-            <div class="sheet-display">
-                <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_more_flag" checked="checked" />
-                <div class="sheet-display">
-                    <h3 class="sheet-right-buttons">
-                        <button type="roll" class="sheet-action-button" name="roll_bonuses" value="&{template:bonuses} {{bonuses=@{bonus_name}}} {{description=@{bonus_desc}}}">
-                            <span name="attr_bonus_name"></span>
-                        </button>
-                    </h3>
-                    
-                    <span name="attr_bonus_desc" class="sheet-keep-whitespace"> </span>
-                </div>
-                <div class="sheet-options">
-                    <h3 class="sheet-right-buttons">
-                        <button type="roll" class="sheet-action-button sheet-tooltip" name="roll_bonuses" value="&{template:bonuses} {{bonuses=@{bonus_name}}} {{description=@{bonus_desc}}}">
-                            <span name="attr_bonus_name"></span>
-                            <span name="attr_bonus_desc" class="sheet-tooltipText sheet-keep-whitespace"></span>
-                        </button>
-                    </h3>
-                </div>
-            </div>
-        </fieldset>
-    </div>
-
-    <!--KEYWORDS SECTION: DONE-->
-    <div class="sheet-section-keywords sheet-section sheet-half">
-        <div class="sheet-header">
-            <span>Keywords</span>
-        </div>
-        <fieldset class="repeating_keywords">
-            <div class="sheet-item-options">
-                <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
-                <div class="sheet-display">
-                    <input class="sheet-item-options-flag2" type="checkbox" name="attr_more_flag" checked="checked" />
-                    <span>E</span>
-                </div>
-                <input class="sheet-item-options-flag" type="checkbox" name="attr_options_flag" checked="checked" />
-                <span>p</span>
-            </div>
-            <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
-            <div class="sheet-options">
-                <input type="text" name="attr_key_name" placeholder="Name" />
-                <input type="text" name="attr_key_source" placeholder="Source" />
-                <textarea name="attr_key_desc" placeholder="Description"></textarea>
-            </div>
-            <div class="sheet-display">
-                <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_more_flag" checked="checked" />
-                <div class="sheet-display">
-                    <h3 class="sheet-right-buttons">
-                        <button type="roll" class="sheet-action-button" name="roll_keywords" value="&{template:default} {{name=@{key_name}}} {{source=@{key_source}}} {{description=@{key_desc}}}">
-                            <span name="attr_key_name"></span>
-                        </button>
-                    </h3>
+                <input class="sheet-level-flag sheet-hidden" type="checkbox" name="attr_show_level_flag" value="1" checked />
+                <div class="sheet-section sheet-section-id-info">
+                    <div class="sheet-repitem">
+                        <input type="text" name="attr_id_name" placeholder="Name" />
+                    </div>
 
                     <div class="sheet-row">
-                        <span class="sheet-inlineLabel">Source</span>
-                        <span class="sheet-inlineLabel">: </span>
-                        <span name="attr_key_source"></span>
+                        <input type="text" name="attr_id_past" placeholder="Past" style="width:45%"/>
+                        <input type="text" name="attr_id_discipline" placeholder="Discipline" style="width:50%"/>
                     </div>
-    
-                    <span name="attr_key_desc" class="sheet-keep-whitespace"> </span>
+                    
+                    <div class="sheet-repitem">
+                        <textarea name="attr_id_description" placeholder="Description"></textarea>
+                    </div>
                 </div>
-                <div class="sheet-options">
-                    <h3 class="sheet-right-buttons">
-                        <button type="roll" class="sheet-action-button sheet-tooltip" name="roll_keywords" value="&{template:default} {{name=@{key_name}}} {{source=@{key_source}}} {{description=@{key_desc}}}">
-                            <span name="attr_key_name"></span>
-                            <span name="attr_key_source"></span>
-                            <span name="attr_key_desc" class="sheet-tooltipText sheet-keep-whitespace"></span>
+
+                <div class="sheet-section sheet-section-id-level">
+                    <div class="sheet-repitem">
+                        <span>Level</span>
+                        <input type="number" name="attr_id_level" placeholder="0" />
+                    </div>
+
+                    <div class="sheet-repitem" style="padding-top: 10px;">
+                        <span>Proficiency</span>
+                        <input type="number" name="attr_proficiency" placeholder="0" />
+                    </div>
+                </div>
+        </div>
+
+        <!--SKILLS SECTION: DONE-->
+            
+        <div class="sheet-section-skills sheet-section sheet-half">
+
+                <div class="section-skills sheet-row">
+                        
+                    <div class="sheet-col">
+
+                        <div class="stat-header">
+                        <span>Body (<input type="number" name="attr_stat_body" value="0"/>)</span>
+                        </div>
+
+                        <div class="container-skill">
+                            
+                        <span>Strength</span>
+                        <input type="number" name="attr_skill_str" value="0" />
+                        <span>Will</span>
+                        <input type="number" name="attr_skill_wil" value="0" />
+                        <span>Vigor</span>
+                        <input type="number" name="attr_skill_vig" value="0" />
+
+                        </div>
+
+                    </div>
+
+                    <div class="sheet-col">
+
+                        <div class="stat-header">
+                            <span>Technique (<input type="number" name="attr_stat_tech" value="0"/>)</span>
+                        </div>
+
+                        <div class="container-skill">
+                            <span>Acrobratics</span>
+                            <input type="number" name="attr_skill_acr" value="0" />
+                            <span>Finesse</span>
+                            <input type="number" name="attr_skill_fin" value="0" />
+                            <span>Control</span>
+                            <input type="number" name="attr_skill_cont" value="0" />
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sheet-row">
+
+                    <div class="sheet-col">
+
+                        <div class="stat-header">
+                            <span>Presence (<input type="number" name="attr_stat_pres" value="0" />)</span>
+                        </div>
+
+                        <div class="container-skill">
+                            
+                            <span>Rapport</span>
+                            <input type="number" name="attr_skill_rap" value="0" />
+                            <span>Menace</span>
+                            <input type="number" name="attr_skill_men" value="0" />
+                            <span>Convince</span>
+                            <input type="number" name="attr_skill_con" value="0" />
+                        </div>
+
+                    </div>
+
+                    <div class="sheet-col">
+
+                        <div class="stat-header">
+                            <span>Mind (<input type="number" name="attr_stat_mind" value="0"/>)</span>
+                        </div>
+                        
+                        <div class="container-skill">
+
+                            <span>Empathy</span>
+                            <input type="number" name="attr_skill_emp" value="0" />
+                            <span>Lore</span>
+                            <input type="number" name="attr_skill_lore" value="0" />
+                            <span>Insight</span>
+                            <input type="number" name="attr_skill_ins" value="0" />
+                        </div>
+                    </div>
+
+                </div>
+
+        </div>
+
+        <!--ROLLS SECTION: DONE-->
+
+        <div class="sheet-section-rolls sheet-section sheet-quarter">
+
+            <div class="sheet-col" style="padding: 20px; padding-right: 20px">
+
+                <div class="d12">
+                    <button type="roll" name="roll_daggerheart_d12" value="&{template:default} {{name=
+        [[[ $[[13]][Boon] + $[[52]][Dread] ?{Advantage|Regular, |Advantage,+ 1d6|Disadvantage,- 1d6} +(?{Modifier?|0}) ]]]
+        $[[$[[66]]]] [[[[[ [[ {0,$[[25]]}=$[[65]]*79 ]] 
+        $[[$[[0]]]]  [[1d12 Boon]] [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ 0 ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]]
+        [[12]][[11]][[10]][[9]][[8]][[7]][[6]][[5]][[4]][[3]][[2]][[1]]
+        [[12]][[11]][[10]][[9]][[8]][[7]][[6]][[5]][[4]][[3]][[2]][[1]]
+        $[[37]] [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ 0 ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]]
+        $[[$[[39]]]] [[ [[1d12 Dread]]+39 ]] [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ 0 ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]]
+        [[12]][[11]][[10]][[9]][[8]][[7]][[6]][[5]][[4]][[3]][[2]][[1]]
+        [[12]][[11]][[10]][[9]][[8]][[7]][[6]][[5]][[4]][[3]][[2]][[1]]
+        $[[78]] [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ 0 ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]]
+        ]]]]]
+        }} {{name=Duality}} {{Boon=$[[0.computed]]}} {{Dread=$[[38.computed]]}} [[[ [[0]] {{Critical!}} ]]] {{Total=$[[53.computed]]}}">
+
+                    <img src="https://raw.github.com/milostuff/black-label-sheet/main/D12.png"> 
+                
+                    </button>
+                </div>
+                
+                <div class="weapon-damage">
+
+                    <div class="primary-weapon">
+                        <button type="roll" name="roll_primary_weapon_damage" value="&{template:default} {{name=@{primary_weapon_name} Damage}} {{Damage=[[@{proficiency} + @{primary_weapon_die_qty}@{primary_weapon_damage_die} + @{primary_weapon_damage_bonus}]]}} {{Type=@{primary_weapon_type}}}">
+                            
+                            Primary Weapon Damage
+
                         </button>
-                    </h3>
-                </div>
-            </div>
-        </fieldset>
-    </div>
+                    </div>
 
-    <div class="sheet-break"></div>
+                    <div class="secondary-weapon">
+                        <button type="roll" name="roll_secondary_weapon_damage" value="&{template:default} {{name=@{secondary_weapon_name} Damage}} {{Damage=[[@{proficiency} + @{secondary_weapon_die_qty}@{secondary_weapon_damage_die} + @{secondary_weapon_damage_bonus}]]}} {{Type=@{secondary_weapon_type}}}">
+                            
+                            Secondary Weapon Damage
+                        
+                        </button>
+                    </div>
 
-    <!--STATUS SECTION: 
-        1. Make it so that stress and sanity are default to 4 and does not show up as the edit view in default 
-    -->
-
-    <div class="sheet-section-status sheet-section sheet-quarter">
-
-        <div class="sheet-status">
-
-            <div class="sheet-stress sheet-col">
-
-                <div class="sheet-status-header">
-                <span class="sheet-status-header-name" name="attr_status_stress">Stress</span>
-                </div>
-
-                <div class="sheet-status-row">
-                <input type="hidden" name="attr_stress_usable" />
-                <input type="checkbox" name="attr_stress_isUsed1" title="1" value=1 />
-                <input type="checkbox" name="attr_stress_isUsed2" title="2" value=2 />
-                <input type="checkbox" name="attr_stress_isUsed3" title="3" value=3 />
-                <input type="checkbox" name="attr_stress_isUsed4" title="4" value=4 />
                 </div>
 
             </div>
 
-            <div class="sheet-sanity sheet-col">
+        </div>
 
-                <div class="sheet-status-header">
-                <span class="sheet-status-header-name" name="attr_status_sanity">Sanity</span>
-                </div>
+        <div class="sheet-break"></div>
 
-                <div class="sheet-status-row">
-                    <input type="hidden" name="attr_sanity_usable" />
-                    <input type="checkbox" name="attr_sanity_isUsed1" title="1" value=1 />
-                    <input type="checkbox" name="attr_sanity_isUsed2" title="2" value=2 />
-                    <input type="checkbox" name="attr_sanity_isUsed3" title="3" value=3 />
-                    <input type="checkbox" name="attr_sanity_isUsed4" title="4" value=4 />
-                </div>
-                
+        <!--BONUSES SECTION: DONE-->
+        <div class="sheet-section-bonuses sheet-section sheet-half">
+            <div class="sheet-header">
+                <span>Bonuses and Stunts</span>
             </div>
-
-        </div>
-            
-    </div>
-
-    <!--CONDITIONS SECTION: 
-        1. Don't change the naming convention you dont want to deal with the edits
-    -->
-    <input class="sheet-conditions-flag sheet-hidden" type="checkbox" name="attr_show_conditions_flag" value="1" />
-
-    <div class="sheet-section-consequences sheet-section sheet-threequarters">
-        <div class="sheet-header">
-            <span>Conditions</span>
-        </div>
-        <div class="sheet-repitem sheet-consequence-row">
-            <span class="sheet-consequence-worth"></span>
-        </div>
-        <fieldset class="repeating_consequences">
-            <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
-            <div class="sheet-options">
-                <select name="attr_worth">
-                    <option value=2 selected><span>Mild</span> (2)</option>
-                    <option value=4><span>Moderate</span> (4)</option>
-                    <option value=6><span>Severe</span> (6)</option>
-                    <option value=8><span>Extreme</span> (8)</option>
-                </select>
-                <input type="hidden" name="attr_worth_text" value="Mild"/>
-                <input type="checkbox" name="attr_isUsed" class="sheet-hidden" value="1" />
-                <div class="sheet-item-options sheet-consequence-edit">
+            <fieldset class="repeating_bonuses">
+                <div class="sheet-item-options">
+                    <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
+                    <div class="sheet-display">
+                        <input class="sheet-item-options-flag2" type="checkbox" name="attr_more_flag" checked="checked" />
+                        <span>E</span>
+                    </div>
                     <input class="sheet-item-options-flag" type="checkbox" name="attr_options_flag" checked="checked" />
-                    <span>3</span>
+                    <span>p</span>
                 </div>
-            </div>
-            <div class="sheet-display sheet-consequence-row">
-                <div class="sheet-consequence-worth">
-                        <span class="sheet-worth-value" name="attr_worth"></span>
-                        <span class="sheet-worth-text" name="attr_worth_text"></span>
+                <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
+                <div class="sheet-options">
+                    <input type="text" name="attr_bonus_name" placeholder="Name" />
+                    <textarea name="attr_bonus_desc" placeholder="Description"></textarea>
                 </div>
-                <input type="text" name="attr_aspect" class="sheet-consequence-aspect" />
+                <div class="sheet-display">
+                    <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_more_flag" checked="checked" />
+                    <div class="sheet-display">
+                        <h3 class="sheet-right-buttons">
+                            <button type="roll" class="sheet-action-button" name="roll_bonuses" value="&{template:bonuses} {{bonuses=@{bonus_name}}} {{description=@{bonus_desc}}}">
+                                <span name="attr_bonus_name"></span>
+                            </button>
+                        </h3>
+                        
+                        <span name="attr_bonus_desc" class="sheet-keep-whitespace" style="text-wrap: wrap;"> </span>
+                    </div>
+                    <div class="sheet-options">
+                        <h3 class="sheet-right-buttons">
+                            <button type="roll" class="sheet-action-button sheet-tooltip" name="roll_bonuses" value="&{template:bonuses} {{bonuses=@{bonus_name}}} {{description=@{bonus_desc}}}">
+                                <span name="attr_bonus_name"></span>
+                                <span name="attr_bonus_desc" class="sheet-tooltipText sheet-keep-whitespace"></span>
+                            </button>
+                        </h3>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <!--KEYWORDS SECTION: 1. Wrap description text-->
+        <div class="sheet-section-keywords sheet-section sheet-half">
+            <div class="sheet-header">
+                <span>Keywords</span>
             </div>
-        </fieldset>
-    </div>
-    
-    <div class="sheet-break"></div>
+            <fieldset class="repeating_keywords">
+                <div class="sheet-item-options">
+                    <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
+                    <div class="sheet-display">
+                        <input class="sheet-item-options-flag2" type="checkbox" name="attr_more_flag" checked="checked" />
+                        <span>E</span>
+                    </div>
+                    <input class="sheet-item-options-flag" type="checkbox" name="attr_options_flag" checked="checked" />
+                    <span>p</span>
+                </div>
+                <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
+                <div class="sheet-options">
+                    <input type="text" name="attr_key_name" placeholder="Name" />
+                    <input type="text" name="attr_key_source" placeholder="Source" />
+                    <textarea name="attr_key_desc" placeholder="Description"></textarea>
+                </div>
+                <div class="sheet-display">
+                    <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_more_flag" checked="checked" />
+                    <div class="sheet-display">
+                        <h3 class="sheet-right-buttons">
+                            <button type="roll" class="sheet-action-button" name="roll_keywords" value="&{template:keywords} {{name=@{key_name}}} {{source=@{key_source}}} {{description=@{key_desc}}}">
+                                <span name="attr_key_name"></span>
+                            </button>
+                        </h3>
 
-    <!--WEAPONS SECTION:
-        1. Primary and Secondary weapons (name, trait/range, type, feature, damage dice)
-        2. Add rolls to hit and to damage 
-    -->
+                        <div class="sheet-row">
+                            <span class="sheet-inlineLabel">Source</span>
+                            <span class="sheet-inlineLabel">: </span>
+                            <span name="attr_key_source"></span>
+                        </div>
+        
+                        <span name="attr_key_desc" class="sheet-keep-whitespace" style="text-wrap: wrap;"></span>
+                    </div>
+                    <div class="sheet-options">
+                        <h3 class="sheet-right-buttons">
+                            <button type="roll" class="sheet-action-button sheet-tooltip" name="roll_keywords" value="&{template:keywords} {{name=@{key_name}}} {{source=@{key_source}}} {{description=@{key_desc}}}">
+                                <span name="attr_key_name"></span>
+                                <span name="attr_key_source"></span>
+                                <span name="attr_key_desc" class="sheet-tooltipText sheet-keep-whitespace"></span>
+                            </button>
+                        </h3>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
 
-    <div class="sheet-section-weapons sheet-section sheet-threequarters">
-
-        <div class="section-weapon">
-
-            <h3>Primary Weapon</h3>
-
-            <div class="section_primary_weapon sheet-row" style="gap: 5px">
-
-                <input type="text" name="attr_primary_weapon_name" placeholder="Name" />
-                <input type="text" name="attr_primary_weapon_trait" placeholder="Trait" />
-                <input type="text" name="attr_primary_weapon_range" placeholder="Range" />
-                <input type="text" name="attr_primary_weapon_type" placeholder="Type" />
-
-                <select name="attr_primary_weapon_damage_die">
-                    <option value="" disabled selected hidden>Damage</option>
-                    <option value="1d4">1d4</option>
-                    <option value="1d6">1d6</option>
-                    <option value="1d8">1d8</option>
-                    <option value="1d10">1d10</option>
-                    <option value="1d12">1d12</option>
-                    <option value="1d20">1d20</option>
-                </select>
+        <div class="sheet-break"></div>
 
 
-                <span class="sheet-plus-sign">+</span>
+        <!--INVENTORY SECTION:-->
+
+        <div class="sheet-section-inventory sheet-section sheet-quarter">
+            <div class="sheet-header">
+                <span>Inventory</span>
+            </div>
+
+            <div class="container-currency">
+                <input type="number" name="attr_dollars_qty" placeholder="0"/>
+                <input type="text" name="attr_currency_dollar" placeholder="USD" readonly/>
+
+                <input type="number" name="attr_unknown1_qty" placeholder="0"/>
+                <input type="text" name="attr_currency_unknown1" placeholder="???" readonly/>
+
+                <input type="number" name="attr_unknown2_qty" placeholder="0"/>
+                <input type="text" name="attr_currency_unknown2" placeholder="???" readonly/>
+
+                <input type="number" name="attr_unknown3_qty" placeholder="0"/>
+                <input type="text" name="attr_currency_unknown3" placeholder="???" readonly/>
                 
-                <select name="attr_primary_weapon_damage_bonus">
-                    <option value="" disabled selected hidden>Bonus</option>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-
-                <textarea name="attr_primary_weapon_feature" placeholder="Feature"></textarea>
-            
             </div>
 
+            <fieldset class="repeating_inventory">
+                <input type="number" name="attr_invent_qty" placeholder="Qty"/>
+                <input type="text" name="attr_invent_name" placeholder="Name"/>
+            </fieldset>
         </div>
 
-        <div class="section-weapon">
+        <!--CONDITIONS SECTION: DONE
+            1. Don't change the naming convention you dont want to deal with the edits
+        -->
+        <input class="sheet-conditions-flag sheet-hidden" type="checkbox" name="attr_show_conditions_flag" value="1" />
 
-            <h3>Secondary Weapon</h3>
+        <div class="sheet-section-consequences sheet-section sheet-half">
+            <div class="sheet-header">
+                <span>Conditions</span>
+            </div>
+            <div class="sheet-repitem sheet-consequence-row">
+                <span class="sheet-consequence-worth"></span>
+            </div>
+            <fieldset class="repeating_consequences">
+                <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
+                <div class="sheet-options">
+                    <select name="attr_worth">
+                        <option value=2 selected><span>Mild</span> (2)</option>
+                        <option value=4><span>Moderate</span> (4)</option>
+                        <option value=6><span>Severe</span> (6)</option>
+                        <option value=8><span>Extreme</span> (8)</option>
+                    </select>
+                    <input type="hidden" name="attr_worth_text" value="Mild"/>
+                    <input type="checkbox" name="attr_isUsed" class="sheet-hidden" value="1" />
+                    <div class="sheet-item-options sheet-consequence-edit">
+                        <input class="sheet-item-options-flag" type="checkbox" name="attr_options_flag" checked="checked" />
+                        <span>3</span>
+                    </div>
+                </div>
+                <div class="sheet-display sheet-consequence-row">
+                    <div class="sheet-consequence-worth">
+                            <span class="sheet-worth-value" name="attr_worth"></span>
+                            <span class="sheet-worth-text" name="attr_worth_text"></span>
+                    </div>
+                    <input type="text" name="attr_aspect" class="sheet-consequence-aspect" />
+                </div>
+            </fieldset>
+        </div>
 
-            <div class="section_secondary_weapon sheet-row" style="gap: 5px">
+        <!--STATUS SECTION: DONE-->
 
-                <input type="text" name="attr_secondary_weapon_name" placeholder="Name" />
-                <input type="text" name="attr_secondary_weapon_trait" placeholder="Trait" />
-                <input type="text" name="attr_secondary_weapon_range" placeholder="Range" />
-                <input type="text" name="attr_secondary_weapon_type" placeholder="Type" />
+        <div class="sheet-section-status sheet-section sheet-quarter">
 
-                <select name="attr_secondary_weapon_amage_die">
-                    <option value="" disabled selected hidden>Damage</option>
-                    <option value="1d4">1d4</option>
-                    <option value="1d6">1d6</option>
-                    <option value="1d8">1d8</option>
-                    <option value="1d10">1d10</option>
-                    <option value="1d12">1d12</option>
-                    <option value="1d20">1d20</option>
-                </select>
+            <div class="sheet-status">
 
+                <div class="sheet-stress sheet-col">
 
-                <span class="sheet-plus-sign">+</span>
+                    <div class="sheet-status-header">
+                    <span class="sheet-status-header-name" name="attr_status_stress">Stress</span>
+                    </div>
+
+                    <div class="sheet-status-row">
+                    <input type="hidden" name="attr_stress_usable" />
+                    <input type="checkbox" name="attr_stress_isUsed1" title="1" value=1 />
+                    <input type="checkbox" name="attr_stress_isUsed2" title="2" value=2 />
+                    <input type="checkbox" name="attr_stress_isUsed3" title="3" value=3 />
+                    <input type="checkbox" name="attr_stress_isUsed4" title="4" value=4 />
+                    </div>
+
+                </div>
+
+                <div class="sheet-sanity sheet-col">
+
+                    <div class="sheet-status-header">
+                    <span class="sheet-status-header-name" name="attr_status_sanity">Sanity</span>
+                    </div>
+
+                    <div class="sheet-status-row">
+                        <input type="hidden" name="attr_sanity_usable" />
+                        <input type="checkbox" name="attr_sanity_isUsed1" title="1" value=1 />
+                        <input type="checkbox" name="attr_sanity_isUsed2" title="2" value=2 />
+                        <input type="checkbox" name="attr_sanity_isUsed3" title="3" value=3 />
+                        <input type="checkbox" name="attr_sanity_isUsed4" title="4" value=4 />
+                    </div>
+                    
+                </div>
+
+                <div class="sheet-enlightenment sheet-col">
+
+                    <div class="sheet-status-header" style="font-size: medium; ">
+                    <span class="sheet-status-header-name" name="attr_status_sanity">Enlightenment</span>
+                    </div>
+
+                    <input type="number" name="attr_enlightenment" placeholder="0" style="text-align: center;">
+                     
+                </div>
+
+            </div>
                 
-                <select name="attr_secondary_weapon_damage_bonus">
-                    <option value="" disabled selected hidden>Bonus</option>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
+        </div>
 
-                <textarea name="attr_secondary_weapon_feature" placeholder="Feature"></textarea>
+        <!--WEAPONS SECTION: DONE-->
+
+        <div class="sheet-section-weapons sheet-section sheet-threequarters">
+
+            <div class="section-weapon">
+
+                <h3>Primary Weapon</h3>
+
+                <div class="section_primary_weapon sheet-row" style="gap: 5px">
+
+                    <input type="text" name="attr_primary_weapon_name" placeholder="Name" />
+                    <input type="text" name="attr_primary_weapon_trait" placeholder="Trait" />
+                    <input type="text" name="attr_primary_weapon_range" placeholder="Range" />
+                    <input type="text" name="attr_primary_weapon_type" placeholder="Type" />
+
+                    <input type="number" name="attr_primary_die_qty" placeholder="Qty" style="width: 10%; text-align: center;"/>
+
+                    <select name="attr_primary_weapon_damage_die">
+                        <option value="" disabled selected hidden>Damage</option>
+                        <option value="d4">d4</option>
+                        <option value="d6">d6</option>
+                        <option value="d8">d8</option>
+                        <option value="d10">d10</option>
+                        <option value="d12">d12</option>
+                        <option value="d20">d20</option>
+                    </select>
+
+
+                    <span class="sheet-plus-sign">+</span>
+                    
+                    <select name="attr_primary_weapon_damage_bonus">
+                        <option value="" disabled selected hidden>Bonus</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+
+                    <textarea name="attr_primary_weapon_feature" placeholder="Feature"></textarea>
+                
+                </div>
+
+            </div>
+
+            <div class="section-weapon">
+
+                <h3>Secondary Weapon</h3>
+
+                <div class="section_secondary_weapon sheet-row" style="gap: 5px">
+
+                    <input type="text" name="attr_secondary_weapon_name" placeholder="Name" />
+                    <input type="text" name="attr_secondary_weapon_trait" placeholder="Trait" />
+                    <input type="text" name="attr_secondary_weapon_range" placeholder="Range" />
+                    <input type="text" name="attr_secondary_weapon_type" placeholder="Type" />
+
+                    <input type="number" name="attr_secondary_die_qty" placeholder="Qty" style="width: 10%; text-align: center;"/>
+
+                    <select name="attr_primary_weapon_damage_die">
+                        <option value="" disabled selected hidden>Damage</option>
+                        <option value="d4">d4</option>
+                        <option value="d6">d6</option>
+                        <option value="d8">d8</option>
+                        <option value="d10">d10</option>
+                        <option value="d12">d12</option>
+                        <option value="d20">d20</option>
+                    </select>
+
+
+                    <span class="sheet-plus-sign">+</span>
+                    
+                    <select name="attr_secondary_weapon_damage_bonus">
+                        <option value="" disabled selected hidden>Bonus</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+
+                    <textarea name="attr_secondary_weapon_feature" placeholder="Feature"></textarea>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
-    
-    <!--INVENTORY SECTION:-->
+        <div class="sheet-break"></div>
 
-    <div class="sheet-section-inventory sheet-section sheet-quarter">
-        <div class="sheet-header">
-            <span>Inventory</span>
+        <!--NOTES SECTION: DONE-->
+
+        <input class="sheet-weapons-flag sheet-hidden" type="checkbox" name="attr_show_weapons_flag" value="1" />
+
+        <div class="sheet-section-notes sheet-section">
+            <div class="sheet-header">
+                <span>NOTES</span>
+            </div>
+
+            <fieldset class="repeating_notes">
+                <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
+                <div class="sheet-item-options sheet-notes-edit">
+                    <input class="sheet-item-options-flag" type="checkbox" name="attr_options_flag" checked="checked" />
+                    <span>p</span>
+                </div>
+                <div class="sheet-options sheet-notes-row">
+                    <input type="text" name="attr_title" placeholder="Notes Title" />
+                    <textarea name="attr_body" placeholder="Notes"></textarea>
+                </div>
+                <div class="sheet-display sheet-notes-row">
+                    <h3><span name="attr_title"></span></h3>
+                    <span name="attr_body" class="sheet-keep-whitespace"></span>
+                </div>
+            </fieldset>
+
         </div>
-        <fieldset class="repeating_inventory">
-            <input type="number" name="attr_invent_qty" placeholder="Qty" style="width:25%"/>
-            <input type="text" name="attr_invent_name" placeholder="Name" style="width:55%" />
-        </fieldset>
-    </div>
-    
 
-    <div class="sheet-break"></div>
-
-    <!--NOTES SECTION:
-        1. Make a part of the sheet instead of an individual tab
-    -->
-
-    <input class="sheet-weapons-flag sheet-hidden" type="checkbox" name="attr_show_weapons_flag" value="1" />
-
-    <div class="sheet-section-notes sheet-section">
-        <div class="sheet-header">
-            <span>NOTES</span>
-        </div>
-
-        <fieldset class="repeating_notes">
-            <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
-            <div class="sheet-item-options sheet-notes-edit">
-                <input class="sheet-item-options-flag" type="checkbox" name="attr_options_flag" checked="checked" />
-                <span>p</span>
-            </div>
-            <div class="sheet-options sheet-notes-row">
-                <input type="text" name="attr_title" placeholder="Notes Title" />
-                <textarea name="attr_body" placeholder="Notes"></textarea>
-            </div>
-            <div class="sheet-display sheet-notes-row">
-                <h3><span name="attr_title"></span></h3>
-                <span name="attr_body" class="sheet-keep-whitespace"></span>
-            </div>
-        </fieldset>
+        <div class="sheet-break"></div>
 
     </div>
-
-    <div class="sheet-break"></div>
-
-
-
 </div>
 
 <!--BONUS ROLL SECTION: DONE-->
@@ -572,13 +610,6 @@ $[[78]] [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ [[ 0 ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]] ]
         </div>
     </div>
 </rolltemplate>
-
-
-<!--SKILL ROLL SECTION:
-    1. Make 2 similar columns to emulate advantage/disadvantage
-    2. Implement rolls + modifier
--->
-
 
 <!--WEAPONS ROLL SECTION
     1. Show weapon roll and damage when pressed

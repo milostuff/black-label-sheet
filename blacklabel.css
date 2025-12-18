@@ -9,6 +9,12 @@
     font-family: Georgia, serif; 
 }
 
+.main-content {
+
+    max-width: fit-content;
+
+}
+
 /* === GENERAL === */
 .sheet-header {
     margin-bottom: 4px;
@@ -102,7 +108,6 @@ button[type=roll] {
     box-shadow: none;
     padding: 0px;
     margin: 0px;
-    width: 60%;
     font-weight: bold;
     text-align: left;
 }
@@ -299,8 +304,10 @@ button[type=roll]::before {
 /* === MECHANICS === */
 
 .sheet-section-mechanics{
-    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/stroke1.png");
-    background-size: 150%;
+    width: 100%;
+    height: 550px;
+    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/stroke2.png");
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
@@ -446,9 +453,36 @@ input[type=number]::-webkit-outer-spin-button{
 
 /* === ROLLS === */
 
-.sheet-section-rolls img{
-    width: 150px
+.weapon-damage button{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    text-wrap: wrap;
+    text-align: center;
+    font-size: 12px;
 }
+
+.primary-weapon{
+    padding-top: 20px;
+    padding-bottom: 10px
+}
+
+
+.d12 img{
+    border-bottom: 5px solid transparent;
+    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/border.png") 30;
+
+    padding-bottom: 20px;
+
+    width: 150px;
+    
+}
+
 
 /* === STRESS === */
 
@@ -499,6 +533,16 @@ input[type=number]::-webkit-outer-spin-button{
 
     border: 5px solid transparent;
     border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/border.png") 30;
+}
+
+.sheet-enlightenment{
+    align-items: center;
+    padding: 10px;
+
+    text-align: center;
+    color: white;
+
+    background-color: black;
 }
 
 
@@ -621,15 +665,30 @@ input[type=number]::-webkit-outer-spin-button{
     display: flex;
 }
 
-/* === WEAPONS === */
+/* === INVENTORY === */
 
-.sheet-section-weapons{
-
-    background-image: url(https://raw.github.com/milostuff/black-label-sheet/main/dagger.png);
-    background-size: 250px;
+.sheet-section-inventory{
+    background-image: url(https://raw.github.com/milostuff/black-label-sheet/main/stroke1.png);
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-position: right 10px;
+
+    height: 650px;
 }
+
+.sheet-section-inventory input[type="number"]{
+    width: 25%;
+    text-align: center;
+
+    margin-bottom: 2px
+}
+
+
+.sheet-section-inventory input[type="text"]{
+    width: 60%;
+    text-align: center;
+}
+
+/* === WEAPONS === */
 
 .sheet-section-weapons select{
     width:20%
@@ -651,109 +710,9 @@ input[type=number]::-webkit-outer-spin-button{
     border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/border.png") 30;
 }
 
-/* === INVENTORY === */
-
-.sheet-section-inventory{
-    background-image: url(https://raw.github.com/milostuff/black-label-sheet/main/stroke1.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
 /* === NOTES === */
 
 .sheet-section-notes{
     background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/sheets.png");
     background-size: 200px;
-}
-
-/* === ROLL TEMPLATE === */
-.sheet-rolltemplate-level .sheet-rollTemplate,
-.sheet-rolltemplate-weapons .sheet-rollTemplate,
-.sheet-rolltemplate-inventory .sheet-rollTemplate,
-.sheet-rolltemplate-skill .sheet-rollTemplate,
-.sheet-rolltemplate-bonuses .sheet-rollTemplate,
-.sheet-rolltemplate-keywords .sheet-rollTemplate,
-.sheet-rolltemplate-consequence .sheet-rollTemplate {
-    position: relative;
-}
-
-.sheet-rolltemplate-level .sheet-rollTemplate .sheet-header,
-.sheet-rolltemplate-weapons .sheet-rollTemplate .sheet-header,
-.sheet-rolltemplate-inventory .sheet-rollTemplate .sheet-header,
-.sheet-rolltemplate-skill .sheet-rollTemplate .sheet-header,
-.sheet-rolltemplate-bonuses .sheet-rollTemplate .sheet-header,
-.sheet-rolltemplate-keywords .sheet-rollTemplate .sheet-header,
-.sheet-rolltemplate-consequence .sheet-rollTemplate .sheet-header {
-    margin-top: 5px;
-}
-
-.sheet-rolltemplate-level .sheet-fate-point-circle,
-.sheet-rolltemplate-weapons .sheet-fate-point-circle,
-.sheet-rolltemplate-inventory .sheet-fate-point-circle,
-.sheet-rolltemplate-skill .sheet-fate-point-circle,
-.sheet-rolltemplate-bonuses .sheet-fate-point-circle,
-.sheet-rolltemplate-keywords .sheet-fate-point-circle,
-.sheet-rolltemplate-consequence .sheet-fate-point-circle {
-    border-radius: 15px;
-    top: -15px;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    right: 10px;
-    display: block;
-    position: absolute;
-    background-color: gold;
-}
-
-.sheet-rolltemplate-level .sheet-fate-point-circle span,
-.sheet-rolltemplate-weapons .sheet-fate-point-circle span,
-.sheet-rolltemplate-inventory .sheet-bonus-circle span,
-.sheet-rolltemplate-skill .sheet-fate-point-circle span,
-.sheet-rolltemplate-bonuses .sheet-fate-point-circle span,
-.sheet-rolltemplate-keywords .sheet-fate-point-circle span,
-.sheet-rolltemplate-inventory .sheet-fate-point-circle span,
-.sheet-rolltemplate-consequence .sheet-fate-point-circle span {
-    line-height: 30px;
-}
-
-.sheet-rolltemplate-level .sheet-fate-point-circle + .sheet-header,
-.sheet-rolltemplate-weapons .sheet-fate-point-circle + .sheet-header,
-.sheet-rolltemplate-inventory .sheet-fate-point-circle + .sheet-header,
-.sheet-rolltemplate-skill .sheet-fate-point-circle + .sheet-header,
-.sheet-rolltemplate-bonuses .sheet-fate-point-circle + .sheet-header,
-.sheet-rolltemplate-keywords .sheet-fate-point-circle + .sheet-header,
-.sheet-rolltemplate-consequence .sheet-fate-point-circle + .sheet-header {
-    margin-top: 16px;
-}
-
-.sheet-rolltemplate-level .sheet-uppercase,
-.sheet-rolltemplate-weapons .sheet-uppercase,
-.sheet-rolltemplate-inventory .sheet-uppercase,
-.sheet-rolltemplate-skill .sheet-uppercase,
-.sheet-rolltemplate-bonuses .sheet-uppercase,
-.sheet-rolltemplate-keywords .sheet-uppercase,
-.sheet-rolltemplate-consequence .sheet-uppercase {
-    text-transform: uppercase;
-}
-
-.sheet-rolltemplate-level .sheet-warning,
-.sheet-rolltemplate-weapons .sheet-warning,
-.sheet-rolltemplate-inventory .sheet-warning,
-.sheet-rolltemplate-skill .sheet-warning,
-.sheet-rolltemplate-bonuses .sheet-warning,
-.sheet-rolltemplate-keywords .sheet-warning,
-.sheet-rolltemplate-consequence .sheet-warning {
-    color: red;
-}
-
-.sheet-rolltemplate-level .sheet-warning::before,
-.sheet-rolltemplate-weapons .sheet-warning::before,
-.sheet-rolltemplate-inventory .sheet-warning::before,
-.sheet-rolltemplate-skill .sheet-warning::before,
-.sheet-rolltemplate-bonuses .sheet-warning::before,
-.sheet-rolltemplate-keywords .sheet-warning::before,
-.sheet-rolltemplate-consequence .sheet-warning::before {
-    color: red;
-    font-family: 'pictos';
-    content: "!";
 }
