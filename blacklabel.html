@@ -11,12 +11,11 @@
 
         <div class="sheet-section-mechanics sheet-section sheet-quarter">
 
-                <div class="sheet-row" style="padding-left: 5px;">
+                <div class="sheet-row">
 
                     <div class="mechanics-container">
 
-                        <img src="https://raw.github.com/milostuff/black-label-sheet/main/hp.png" alt="hp" style="width:150px; height: 150px;">
-
+                        <img src="https://raw.github.com/milostuff/black-label-sheet/main/hp.png" alt="hp_image" style="width:150px; height: 150px;">
                         <input type="number" name="attr_hp" value="0"/>
 
                         <div class="circle">
@@ -25,8 +24,7 @@
 
                     <div class="mechanics-container">
 
-                        <img src="https://raw.github.com/milostuff/black-label-sheet/main/shield.png" alt="shield" style="width:150px; height: 150px">
-
+                        <img src="https://raw.github.com/milostuff/black-label-sheet/main/shield.png" alt="shield_image" style="width:150px; height: 150px">
                         <input type="number" name="attr_shield" value="0" style="left: 59px"/>
 
                         <div class="circle">
@@ -37,13 +35,13 @@
 
                     <div class="mechanics-container" >
 
-                        <img src="https://raw.github.com/milostuff/black-label-sheet/main/bp.png" alt="bp" style="width:150px; height: 150px;">
-
+                        <img src="https://raw.github.com/milostuff/black-label-sheet/main/bp.png" alt="bp_image" style="width:150px; height: 150px;">
                         <input type="number" name="attr_bp" value="0"/>
 
                         <div class="circle">
                             <input type="number" name="attr_bp" value="5"/>
                         </div>
+
                     </div>
                 
                 </div>
@@ -61,6 +59,7 @@
 
                 <input class="sheet-level-flag sheet-hidden" type="checkbox" name="attr_show_level_flag" value="1" checked />
                 <div class="sheet-section sheet-section-id-info">
+
                     <div class="sheet-repitem">
                         <input type="text" name="attr_id_name" placeholder="Name" />
                     </div>
@@ -73,9 +72,11 @@
                     <div class="sheet-repitem">
                         <textarea name="attr_id_description" placeholder="Description"></textarea>
                     </div>
+
                 </div>
 
                 <div class="sheet-section sheet-section-id-level">
+
                     <div class="sheet-repitem">
                         <span>Level</span>
                         <input type="number" name="attr_id_level" placeholder="0" />
@@ -83,8 +84,9 @@
 
                     <div class="sheet-repitem" style="padding-top: 10px;">
                         <span>Proficiency</span>
-                        <input type="number" name="attr_proficiency" placeholder="0" />
+                        <input type="number" name="attr_id_proficiency" placeholder="0" />
                     </div>
+                    
                 </div>
         </div>
 
@@ -97,18 +99,16 @@
                     <div class="sheet-col">
 
                         <div class="stat-header">
-                        <span>Body (<input type="number" name="attr_stat_body" value="0"/>)</span>
+                            <span>Body (<input type="number" name="attr_stat_body" value="0"/>)</span>
                         </div>
 
                         <div class="container-skill">
-                            
-                        <span>Strength</span>
-                        <input type="number" name="attr_skill_str" value="0" />
-                        <span>Will</span>
-                        <input type="number" name="attr_skill_wil" value="0" />
-                        <span>Vigor</span>
-                        <input type="number" name="attr_skill_vig" value="0" />
-
+                            <span>Strength</span>
+                            <input type="number" name="attr_skill_str" value="0" />
+                            <span>Will</span>
+                            <input type="number" name="attr_skill_wil" value="0" />
+                            <span>Vigor</span>
+                            <input type="number" name="attr_skill_vig" value="0" />
                         </div>
 
                     </div>
@@ -168,6 +168,7 @@
                             <span>Insight</span>
                             <input type="number" name="attr_skill_ins" value="0" />
                         </div>
+
                     </div>
 
                 </div>
@@ -203,7 +204,7 @@
                 <div class="weapon-damage">
 
                     <div class="primary-weapon">
-                        <button type="roll" name="roll_primary_weapon_damage" value="&{template:default} {{name=@{primary_weapon_name} Damage}} {{Damage=[[@{proficiency} + @{primary_weapon_die_qty}@{primary_weapon_damage_die} + @{primary_weapon_damage_bonus}]]}} {{Type=@{primary_weapon_type}}}">
+                        <button type="roll" name="roll_primary_weapon_damage" value="&{template:default} {{name=@{primary_weapon_name} Damage}} {{Damage=[[@{proficiency} + @{primary_die_qty}@{primary_weapon_damage_die} + @{primary_weapon_damage_bonus}]]}} {{Type=@{primary_weapon_type}}}">
                             
                             Primary Weapon Damage
 
@@ -211,7 +212,7 @@
                     </div>
 
                     <div class="secondary-weapon">
-                        <button type="roll" name="roll_secondary_weapon_damage" value="&{template:default} {{name=@{secondary_weapon_name} Damage}} {{Damage=[[@{proficiency} + @{secondary_weapon_die_qty}@{secondary_weapon_damage_die} + @{secondary_weapon_damage_bonus}]]}} {{Type=@{secondary_weapon_type}}}">
+                        <button type="roll" name="roll_secondary_weapon_damage" value="&{template:default} {{name=@{secondary_weapon_name} Damage}} {{Damage=[[@{proficiency} + @{secondary_die_qty}@{secondary_weapon_damage_die} + @{secondary_weapon_damage_bonus}]]}} {{Type=@{secondary_weapon_type}}}">
                             
                             Secondary Weapon Damage
                         
@@ -228,10 +229,13 @@
 
         <!--BONUSES SECTION: DONE-->
         <div class="sheet-section-bonuses sheet-section sheet-half">
+
             <div class="sheet-header">
                 <span>Bonuses and Stunts</span>
             </div>
+
             <fieldset class="repeating_bonuses">
+
                 <div class="sheet-item-options">
                     <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
                     <div class="sheet-display">
@@ -241,13 +245,17 @@
                     <input class="sheet-item-options-flag" type="checkbox" name="attr_options_flag" checked="checked" />
                     <span>p</span>
                 </div>
+
                 <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
+                
                 <div class="sheet-options">
                     <input type="text" name="attr_bonus_name" placeholder="Name" />
                     <textarea name="attr_bonus_desc" placeholder="Description"></textarea>
                 </div>
+
                 <div class="sheet-display">
                     <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_more_flag" checked="checked" />
+                    
                     <div class="sheet-display">
                         <h3 class="sheet-right-buttons">
                             <button type="roll" class="sheet-action-button" name="roll_bonuses" value="&{template:bonuses} {{bonuses=@{bonus_name}}} {{description=@{bonus_desc}}}">
@@ -255,8 +263,9 @@
                             </button>
                         </h3>
                         
-                        <span name="attr_bonus_desc" class="sheet-keep-whitespace" style="text-wrap: wrap;"> </span>
+                        <span name="attr_bonus_desc" class="sheet-keep-whitespace"> </span>
                     </div>
+
                     <div class="sheet-options">
                         <h3 class="sheet-right-buttons">
                             <button type="roll" class="sheet-action-button sheet-tooltip" name="roll_bonuses" value="&{template:bonuses} {{bonuses=@{bonus_name}}} {{description=@{bonus_desc}}}">
@@ -265,33 +274,46 @@
                             </button>
                         </h3>
                     </div>
+
                 </div>
+
             </fieldset>
+
         </div>
 
-        <!--KEYWORDS SECTION: 1. Wrap description text-->
+        <!--KEYWORDS SECTION: DONE-->
         <div class="sheet-section-keywords sheet-section sheet-half">
+
             <div class="sheet-header">
                 <span>Keywords</span>
             </div>
+
             <fieldset class="repeating_keywords">
+
                 <div class="sheet-item-options">
                     <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
+                    
                     <div class="sheet-display">
                         <input class="sheet-item-options-flag2" type="checkbox" name="attr_more_flag" checked="checked" />
                         <span>E</span>
                     </div>
+
                     <input class="sheet-item-options-flag" type="checkbox" name="attr_options_flag" checked="checked" />
+                    
                     <span>p</span>
                 </div>
+
                 <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
+                
                 <div class="sheet-options">
                     <input type="text" name="attr_key_name" placeholder="Name" />
                     <input type="text" name="attr_key_source" placeholder="Source" />
                     <textarea name="attr_key_desc" placeholder="Description"></textarea>
                 </div>
+
                 <div class="sheet-display">
                     <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_more_flag" checked="checked" />
+                    
                     <div class="sheet-display">
                         <h3 class="sheet-right-buttons">
                             <button type="roll" class="sheet-action-button" name="roll_keywords" value="&{template:keywords} {{name=@{key_name}}} {{source=@{key_source}}} {{description=@{key_desc}}}">
@@ -305,8 +327,9 @@
                             <span name="attr_key_source"></span>
                         </div>
         
-                        <span name="attr_key_desc" class="sheet-keep-whitespace" style="text-wrap: wrap;"></span>
+                        <span name="attr_key_desc" class="sheet-keep-whitespace"> </span>
                     </div>
+
                     <div class="sheet-options">
                         <h3 class="sheet-right-buttons">
                             <button type="roll" class="sheet-action-button sheet-tooltip" name="roll_keywords" value="&{template:keywords} {{name=@{key_name}}} {{source=@{key_source}}} {{description=@{key_desc}}}">
@@ -316,16 +339,19 @@
                             </button>
                         </h3>
                     </div>
+
                 </div>
+
             </fieldset>
+
         </div>
 
         <div class="sheet-break"></div>
 
-
         <!--INVENTORY SECTION:-->
 
         <div class="sheet-section-inventory sheet-section sheet-quarter">
+
             <div class="sheet-header">
                 <span>Inventory</span>
             </div>
@@ -341,14 +367,14 @@
                 <input type="text" name="attr_currency_unknown2" placeholder="???" readonly/>
 
                 <input type="number" name="attr_unknown3_qty" placeholder="0"/>
-                <input type="text" name="attr_currency_unknown3" placeholder="???" readonly/>
-                
+                <input type="text" name="attr_currency_unknown3" placeholder="???" readonly/>    
             </div>
 
             <fieldset class="repeating_inventory">
                 <input type="number" name="attr_invent_qty" placeholder="Qty"/>
                 <input type="text" name="attr_invent_name" placeholder="Name"/>
             </fieldset>
+
         </div>
 
         <!--CONDITIONS SECTION: DONE
@@ -357,14 +383,18 @@
         <input class="sheet-conditions-flag sheet-hidden" type="checkbox" name="attr_show_conditions_flag" value="1" />
 
         <div class="sheet-section-consequences sheet-section sheet-half">
+
             <div class="sheet-header">
                 <span>Conditions</span>
             </div>
+
             <div class="sheet-repitem sheet-consequence-row">
                 <span class="sheet-consequence-worth"></span>
             </div>
+
             <fieldset class="repeating_consequences">
                 <input class="sheet-options-flag sheet-hidden" type="checkbox" name="attr_options_flag" checked="checked" />
+                
                 <div class="sheet-options">
                     <select name="attr_worth">
                         <option value=2 selected><span>Mild</span> (2)</option>
@@ -379,6 +409,7 @@
                         <span>3</span>
                     </div>
                 </div>
+
                 <div class="sheet-display sheet-consequence-row">
                     <div class="sheet-consequence-worth">
                             <span class="sheet-worth-value" name="attr_worth"></span>
@@ -386,7 +417,9 @@
                     </div>
                     <input type="text" name="attr_aspect" class="sheet-consequence-aspect" />
                 </div>
+
             </fieldset>
+
         </div>
 
         <!--STATUS SECTION: DONE-->
@@ -585,6 +618,8 @@
             <span>{{bonuses}}</span>
         </div>
         <div class="row">
+            <span class="sheet-inlineLabel">Description</span>
+            <span class="sheet-inlineLabel">: </span>
             <span>{{description}}</span>
         </div>
     </div>
@@ -606,16 +641,14 @@
             <span>{{source}}</span>
         </div>
         <div class="row">
+            <span class="sheet-inlineLabel">Description</span>
+            <span class="sheet-inlineLabel">: </span>
             <span>{{description}}</span>
         </div>
     </div>
 </rolltemplate>
 
-<!--WEAPONS ROLL SECTION
-    1. Show weapon roll and damage when pressed
-    2. Damage and Bonus does not show up auhhuhuh
-    3. Have an option to set weapon to active/inactive and primary/secondary
--->
+<!--WEAPONS ROLL SECTION: DONE - Unused ATM-->
 
 <rolltemplate class="sheet-rolltemplate-weapons">
     <div class="sheet-rollTemplate">
@@ -650,293 +683,6 @@
     </div>
 </rolltemplate>
 
-    
-<script type="text/worker">
-    on('sheet:opened', function () {
-        getAttrs(["run_firstTime_setup", "default_stressSkills",
-                    "default_consequences", "show_conditions_flag",
-                    "importedOldData_flag"], function (values) {
-            if (isNullOrWhitespace(values["importedOldData_flag"]))
-            {
-                ImportIdData();
-                ImportSkills();
-                ImportAspects();
-                ImportStunts();
-                ImportExtras();
-                ImportStresses(values["run_firstTime_setup"], values["default_stressSkills"]);
-                ImportConsequences(values["run_firstTime_setup"],
-                    values["default_consequences"],
-                    values["show_conditions_flag"]);
-                ImportNotes();
-    
-                setAttrs({ importedOldData_flag: 1, run_firstTime_setup: 0 });
-                return;
-            }
-            if (!isNullOrWhitespace(values["run_firstTime_setup"])) {
-                SetDefaultStress(values["default_stressSkills"]);
-                SetDefaultConsequences(values["default_consequences"], values["show_conditions_flag"]);
-    
-                setAttrs({ run_firstTime_setup: 0 });
-            }
-        });
-    });
-    
-    function ImportStresses (runFirstTimeSetup, default_stressSkills) {
-        var attr = [];
-        attr.push("PhyGoverningSkill");
-        attr.push("MenGoverningSkill");
-        for (var i = 1; i < 5; i++) {
-            attr.push("Phy" + i);
-            attr.push("Phy" + i + "Active");
-            attr.push("Men" + i);
-            attr.push("Men" + i + "Active");
-        }
-        
-        getAttrs(attr, function (basicValues) {
-            var phyGoverningSkill = basicValues["PhyGoverningSkill"];
-            if (isNullOrWhitespace(phyGoverningSkill))
-                phyGoverningSkill = "Physique";
-            
-            var menGoverningSkill = basicValues["MenGoverningSkill"];
-            if (isNullOrWhitespace(menGoverningSkill))
-                menGoverningSkill = "Will";
-            
-            getSectionIDs("repeating_Stress", function (idArray) {
-                if (idArray.length == 0) {
-                    importStress("Physical", phyGoverningSkill, "Phy", basicValues);
-                    importStress("Mental", menGoverningSkill, "Men", basicValues);
-                        
-                    if (!isNullOrWhitespace(runFirstTimeSetup))
-                        SetDefaultStress(default_stressSkills);
-    
-                    return;
-                }
-            
-                var attrs = [];
-                idArray.forEach(id =>  {
-                    attrs.push("repeating_Stress_" + id + "_Name");
-                    attrs.push("repeating_Stress_" + id + "_Mirrored");
-                    for (var x = 1; x < 5; x++) {
-                        attr.push("repeating_Stress_" + id + "_Stress" + x);
-                        attr.push("repeating_Stress_" + id + "_Stress" + x + "Active");
-                    }
-                });
-    
-                getAttrs(attrs, function (repValues) {
-                    var mirrors = [];
-                    for (var i = 0; i < idArray.length; i++) {
-                        mirrors.push("repeating_StressOptions_" + repValues["repeating_Stress_" + idArray[i] + "_Mirrored"] + "_GoverningSkill");
-                    }
-        
-                    getAttrs(mirrors, function (mirroredValues) {
-                        importStress("Physical", phyGoverningSkill, "Phy", basicValues);
-                        importStress("Mental", menGoverningSkill, "Men", basicValues);
-    
-                        idArray.forEach(id => {
-                            importStress(repValues["repeating_Stress_" + id + "_Name"],
-                                mirroredValues["repeating_StressOptions_" + repValues["repeating_Stress_" + id + "_Mirrored"] + "_GoverningSkill"],
-                                "repeating_Stress_" + id + "_Stress", repValues);
-                            
-                            removeRepeatingRow("repeating_StressOptions_" + repValues["repeating_Stress_" + id + "_Mirrored"]);
-                            removeRepeatingRow("repeating_Stress_" + id);
-                        });
-                        
-                        if (!isNullOrWhitespace(runFirstTimeSetup))
-                            SetDefaultStress(default_stressSkills);
-                    });
-                });
-            });    
-        });
-    };
-    
-    const importStress = (stress, skill, prefix, attrs) => {
-        var newRowAttrs = {};
-        var stressMax = 0;
-    
-        var newRowId = generateRowID();
-        newRowAttrs["repeating_stress_" + newRowId + "_name"] = stress.trim();
-    
-        for (var i = 1; i < 5; i++) {
-            if(!isNullOrWhitespace(attrs[prefix + i + "Active"])) {
-                stressMax++;
-                if(!isNullOrWhitespace(attrs[prefix + i]))
-                    newRowAttrs["repeating_stress_" + newRowId + "_isUsed" + i] = i;
-            }
-            else
-                return;
-        }
-    
-        if (stressMax == 0)
-            return;
-    
-        newRowAttrs["repeating_stress_" + newRowId + "_usable"] = stressMax;
-    
-        if (!isNullOrWhitespace(skill)) {
-            newRowAttrs["repeating_stress_" + newRowId + "_skill"] = skill.trim();
-            newRowAttrs["repeating_stress_" + newRowId + "_bound"] = 1;
-        }
-    
-        setAttrs(newRowAttrs);
-    };
-    
-    function SetDefaultStress (default_stressSkills) {
-        if (!isNullOrWhitespace(default_stressSkills)) {
-            getSectionIDs("repeating_stress", function (idArray) {
-                if (idArray.length == 0) {
-                    var stressSkills = default_stressSkills.split(",");
-                    var newRowAttrs = {};
-                    stressSkills.forEach(element => {
-                        var keyValuePair = element.split(":");
-                        var newRowId = generateRowID();
-                        newRowAttrs["repeating_stress_" + newRowId + "_name"] = keyValuePair[0].trim();
-                        if (keyValuePair.length > 1) {
-                            var skill = keyValuePair[1].trim();
-                            var usable = Number(skill);
-                            if (isNaN(usable)) {
-                                newRowAttrs["repeating_stress_" + newRowId + "_skill"] = skill;
-                                newRowAttrs["repeating_stress_" + newRowId + "_usable"] = 2;
-                                newRowAttrs["repeating_stress_" + newRowId + "_bound"] = 1;
-                            }
-                            else {
-                                newRowAttrs["repeating_stress_" + newRowId + "_usable"] = usable;
-                                newRowAttrs["repeating_stress_" + newRowId + "_bound"] = 0;
-                            }
-                            newRowAttrs["repeating_stress_" + newRowId + "_options_flag"] = 0;
-                        }
-                        else {
-                            newRowAttrs["repeating_stress_" + newRowId + "_options_flag"] = "on";
-                        }
-                    });
-                    setAttrs(newRowAttrs);
-                }
-            });
-        }
-    };
-    
-    function ImportConsequences (runFirstTimeSetup, default_consequences, show_conditions_flag) {
-        var attr = [];
-        attr.push("MildConsequence");
-        attr.push("MildInvoke");
-        attr.push("ModerateConsequence");
-        attr.push("ModerateInvoke");
-        attr.push("SevereConsequence");
-        attr.push("SevereInvoke");
-        
-        getAttrs(attr, function (basicValues) {
-            getSectionIDs("repeating_Cons", function (idArray) {
-                if (idArray.length == 0) {
-                    if (isNullOrWhitespace(basicValues["MildConsequence"])
-                        && isNullOrWhitespace(basicValues["MildInvoke"])
-                        && isNullOrWhitespace(basicValues["ModerateConsequence"])
-                        && isNullOrWhitespace(basicValues["ModerateInvoke"])
-                        && isNullOrWhitespace(basicValues["SevereConsequence"])
-                        && isNullOrWhitespace(basicValues["SevereInvoke"])) {
-                            if (!isNullOrWhitespace(runFirstTimeSetup))
-                                SetDefaultConsequences(default_consequences, show_conditions_flag);
-                            return;
-                        }
-                    
-                    importConsequence(2, basicValues["MildConsequence"], !isNullOrWhitespace(basicValues["MildInvoke"]));
-                    importConsequence(4, basicValues["ModerateConsequence"], !isNullOrWhitespace(basicValues["ModerateInvoke"]));
-                    importConsequence(6, basicValues["SevereConsequence"], !isNullOrWhitespace(basicValues["SevereInvoke"]));
-                    return;
-                }
-            
-                var attrs = [];
-                for (var i = 0; i < idArray.length; i++) {
-                    attrs.push("repeating_Cons_" + idArray[i] + "_conType");
-                    attrs.push("repeating_Cons_" + idArray[i] + "_Consequence");
-                    attrs.push("repeating_Cons_" + idArray[i] + "_Invoke");
-                }
-    
-                getAttrs(attrs, function (repValues) {
-                    importConsequence(2, basicValues["MildConsequence"], !isNullOrWhitespace(basicValues["MildInvoke"]));
-                    importConsequence(4, basicValues["ModerateConsequence"], !isNullOrWhitespace(basicValues["ModerateInvoke"]));
-                    importConsequence(6, basicValues["SevereConsequence"], !isNullOrWhitespace(basicValues["SevereInvoke"]));
-    
-                    for (var i = 0; i < idArray.length; i++) {
-                        var worth = 0;
-                        switch (repValues["repeating_Cons_" + idArray[i] + "_conType"]) {
-                            case "Mild":
-                                worth = 2;
-                                break;
-                            case "Moderate":
-                                worth = 4;
-                                break;
-                            case "Severe":
-                                worth = 6;
-                                break;
-                        }
-                    
-                        importConsequence(worth,
-                            repValues["repeating_Cons_" + idArray[i] + "_Consequence"],
-                            !isNullOrWhitespace(repValues["repeating_Cons_" + idArray[i] + "_Invoke"]));
-                        
-                        removeRepeatingRow("repeating_Cons_" + idArray[i]);
-                    }
-                });
-            });    
-        });
-    };
-    
-    const importConsequence = (worth, aspect, addBonus) => {
-        if (!isNaN(worth) && worth > 0) {
-            var newRowAttrs = {};
-            var newRowId = generateRowID();
-            newRowAttrs["repeating_consequences_" + newRowId + "_worth"] = worth;
-            newRowAttrs["repeating_consequences_" + newRowId + "_aspect"] = aspect;
-            newRowAttrs["repeating_consequences_" + newRowId + "_worth_text"] = getConsequenceText(worth);
-    
-            setAttrs(newRowAttrs);
-    
-            if (addBonus)
-                importSitAspect(aspect, 1);
-        }
-    };
-    
-    function SetDefaultConsequences (default_consequences, show_conditions_flag) {
-        if (!isNullOrWhitespace(default_consequences)) {
-            getSectionIDs("repeating_consequences", function (idArray) {
-                if (idArray.length == 0) {
-                    var consequences = default_consequences.split(",")
-                    var newRowAttrs = {};
-                    consequences.forEach(consequence => {
-                        var elements = consequence.split("|");
-                        var worth = Number(elements[0].trim());
-                        if (!isNaN(worth) && worth > 0) {
-                            var newRowId = generateRowID();
-                            newRowAttrs["repeating_consequences_" + newRowId + "_worth"] = worth;
-    
-                            if (elements.length > 1)
-                                newRowAttrs["repeating_consequences_" + newRowId + "_aspect"] = elements[1];
-                            if (show_conditions_flag == "1")
-                                newRowAttrs["repeating_consequences_" + newRowId + "_worth_text"] = getConditionsText(worth);
-                            else
-                                newRowAttrs["repeating_consequences_" + newRowId + "_worth_text"] = getConsequenceText(worth);
-                        }
-                    });
-                    setAttrs(newRowAttrs);
-                }
-            });
-        }
-    };
-    
-    function getConsequenceText(worth) {
-        switch (Number(worth)) {
-            case 2:
-                return "Mild";
-            case 4:
-                return "Moderate";
-            case 6:
-                return "Severe";
-            case 8:
-                return "Extreme";
-            default:
-                return "Custom";
-        }
-    };
-    
-</script>
 
 
 
