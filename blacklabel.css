@@ -1,7 +1,7 @@
 .sheet-container {
     position: relative;
-    background-image: url(https://raw.github.com/milostuff/black-label-sheet/main/doodles.png), 
-    url(https://raw.github.com/milostuff/black-label-sheet/main/paper.jpg);
+    background-image: url(https://raw.github.com/milostuff/black-label-sheet/main/graphics/doodles.png), 
+    url(https://raw.github.com/milostuff/black-label-sheet/main/graphics/paper.jpg);
     background-size: contain;
     border: solid 5px;
     padding: 10px;
@@ -320,7 +320,7 @@ button[type=roll]::before {
 .sheet-section-mechanics{
     width: 100%;
     height: 550px;
-    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/stroke2.png");
+    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/graphics/stroke2.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -418,8 +418,8 @@ button[type=roll]::before {
 
 .sheet-section-skills{
     border: 15px solid transparent;
-    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/border.png") 30;
-    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/sheets.png");
+    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/graphics/border.png") 30;
+    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/graphics/sheets.png");
     background-size: 200px
 }
 
@@ -487,7 +487,7 @@ input[type=number]::-webkit-outer-spin-button{
 
 .d12 img{
     border-bottom: 5px solid transparent;
-    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/border.png") 30;
+    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/graphics/border.png") 30;
     padding-bottom: 20px;
     width: 150px;
 }
@@ -503,8 +503,8 @@ input[type=number]::-webkit-outer-spin-button{
 
 .sheet-status{
     border: 10px solid transparent;
-    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/border.png") 30;
-    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/sheets.png");
+    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/graphics/border.png") 30;
+    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/graphics/sheets.png");
     background-size: 200px;
     position: relative;
     align-items: center;
@@ -515,12 +515,12 @@ input[type=number]::-webkit-outer-spin-button{
 .sheet-stress{
     width: 100%;
     height: 150px;
-    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/stress.png");
+    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/graphics/stress.png");
     background-size: 100px;
     background-repeat: no-repeat;
     text-align: right;
     border: 5px solid transparent;
-    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/border.png") 30;
+    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/graphics/border.png") 30;
 }
 
 .sheet-stress .sheet-status-header{
@@ -531,12 +531,12 @@ input[type=number]::-webkit-outer-spin-button{
 .sheet-sanity{
     width: 100%;
     height: 150px;
-    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/sanity.png");
+    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/graphics/sanity.png");
     background-size: 85px;
     background-repeat: no-repeat;
     background-position: 100% 100%;
     border: 5px solid transparent;
-    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/border.png") 30;
+    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/graphics/border.png") 30;
 }
 
 .sheet-enlightenment{
@@ -668,7 +668,7 @@ input[type=number]::-webkit-outer-spin-button{
 /* === INVENTORY === */
 
 .sheet-section-inventory{
-    background-image: url(https://raw.github.com/milostuff/black-label-sheet/main/stroke1.png);
+    background-image: url(https://raw.github.com/milostuff/black-label-sheet/main/graphics/stroke1.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
@@ -707,13 +707,13 @@ input[type=number]::-webkit-outer-spin-button{
     margin-bottom: 10px;
 
     border: 15px solid transparent;
-    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/border.png") 30;
+    border-image: url("https://raw.github.com/milostuff/black-label-sheet/main/graphics/border.png") 30;
 }
 
 /* === NOTES === */
 
 .sheet-section-notes{
-    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/sheets.png");
+    background-image: url("https://raw.github.com/milostuff/black-label-sheet/main/graphics/sheets.png");
     background-size: 200px;
 }
 
