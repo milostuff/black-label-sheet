@@ -19,7 +19,7 @@
                         <input type="number" name="attr_hp" value="0"/>
 
                         <div class="circle">
-                            <input type="number" name="attr_hp" value="10"/>
+                            <input type="number" name="attr_max_hp" value="10"/>
                         </div>
 
                     <div class="mechanics-container">
@@ -28,7 +28,7 @@
                         <input type="number" name="attr_shield" value="0" style="left: 59px"/>
 
                         <div class="circle">
-                            <input type="number" name="attr_shield" value="0"/>
+                            <input type="number" name="attr_max_shield" value="0"/>
                         </div>
 
                     </div>
@@ -39,7 +39,7 @@
                         <input type="number" name="attr_bp" value="0"/>
 
                         <div class="circle">
-                            <input type="number" name="attr_bp" value="5"/>
+                            <input type="number" name="attr_max_bp" value="5"/>
                         </div>
 
                     </div>
@@ -357,16 +357,16 @@
             </div>
 
             <div class="container-currency">
-                <input type="number" name="attr_dollars_qty" placeholder="0"/>
+                <input type="text" name="attr_dollars_qty" placeholder="0" style="width: 35px"/>
                 <input type="text" name="attr_currency_dollar" placeholder="USD" readonly/>
 
-                <input type="number" name="attr_unknown1_qty" placeholder="0"/>
+                <input type="text" name="attr_unknown1_qty" placeholder="0" style="width: 35px"/>
                 <input type="text" name="attr_currency_unknown1" placeholder="???" readonly/>
 
-                <input type="number" name="attr_unknown2_qty" placeholder="0"/>
+                <input type="text" name="attr_unknown2_qty" placeholder="0" style="width: 35px"/>
                 <input type="text" name="attr_currency_unknown2" placeholder="???" readonly/>
 
-                <input type="number" name="attr_unknown3_qty" placeholder="0"/>
+                <input type="text" name="attr_unknown3_qty" placeholder="0"style="width: 35px"/>
                 <input type="text" name="attr_currency_unknown3" placeholder="???" readonly/>    
             </div>
 
@@ -435,12 +435,21 @@
                     </div>
 
                     <div class="sheet-status-row">
-                    <input type="hidden" name="attr_stress_usable" />
-                    <input type="checkbox" name="attr_stress_isUsed1" title="1" value=1 />
-                    <input type="checkbox" name="attr_stress_isUsed2" title="2" value=2 />
-                    <input type="checkbox" name="attr_stress_isUsed3" title="3" value=3 />
-                    <input type="checkbox" name="attr_stress_isUsed4" title="4" value=4 />
+                        <input type="hidden" name="attr_stress_usable" />
+                        <input type="checkbox" name="attr_stress_isUsed1" title="1" value=1 />
+                        <input type="checkbox" name="attr_stress_isUsed2" title="2" value=2 />
+                        <input type="checkbox" name="attr_stress_isUsed3" title="3" value=3 />
+                        <input type="checkbox" name="attr_stress_isUsed4" title="4" value=4 />
                     </div>
+
+                    <div class="sheet-status-row">
+                        <input type="hidden" name="attr_stress_usable" />
+                        <input type="checkbox" name="attr_stress_isUsed5" title="5" value=5 />
+                        <input type="checkbox" name="attr_stress_isUsed6" title="6" value=6 />
+                        <input type="checkbox" name="attr_stress_isUsed7" title="7" value=7 />
+                        <input type="checkbox" name="attr_stress_isUsed8" title="8" value=8 />
+                    </div>
+                    
 
                 </div>
 
@@ -456,6 +465,14 @@
                         <input type="checkbox" name="attr_sanity_isUsed2" title="2" value=2 />
                         <input type="checkbox" name="attr_sanity_isUsed3" title="3" value=3 />
                         <input type="checkbox" name="attr_sanity_isUsed4" title="4" value=4 />
+                    </div>
+
+                    <div class="sheet-status-row">
+                        <input type="hidden" name="attr_sanity_usable" />
+                        <input type="checkbox" name="attr_sanity_isUsed5" title="5" value=5 />
+                        <input type="checkbox" name="attr_sanity_isUsed6" title="6" value=6 />
+                        <input type="checkbox" name="attr_sanity_isUsed7" title="7" value=7 />
+                        <input type="checkbox" name="attr_sanity_isUsed8" title="8" value=8 />
                     </div>
                     
                 </div>
