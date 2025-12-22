@@ -204,7 +204,7 @@
                 <div class="weapon-damage">
 
                     <div class="primary-weapon">
-                        <button type="roll" name="roll_primary_weapon_damage" value="&{template:default} {{name=@{primary_weapon_name} Damage}} {{Damage=[[@{proficiency} + @{primary_die_qty}@{primary_weapon_damage_die} + @{primary_weapon_damage_bonus}]]}} {{Type=@{primary_weapon_type}}}">
+                        <button type="roll" name="roll_primary_weapon_damage" value="&{template:default} {{name=@{primary_weapon_name} Damage}} {{Damage=[[@{id_proficiency} + @{primary_die_qty}@{primary_weapon_damage_die} + @{primary_weapon_damage_bonus}]]}} {{Type=@{primary_weapon_type}}}">
                             
                             Primary Weapon Damage
 
@@ -212,7 +212,7 @@
                     </div>
 
                     <div class="secondary-weapon">
-                        <button type="roll" name="roll_secondary_weapon_damage" value="&{template:default} {{name=@{secondary_weapon_name} Damage}} {{Damage=[[@{proficiency} + @{secondary_die_qty}@{secondary_weapon_damage_die} + @{secondary_weapon_damage_bonus}]]}} {{Type=@{secondary_weapon_type}}}">
+                        <button type="roll" name="roll_secondary_weapon_damage" value="&{template:default} {{name=@{secondary_weapon_name} Damage}} {{Damage=[[@{id_proficiency} + @{secondary_die_qty}@{secondary_weapon_damage_die} + @{secondary_weapon_damage_bonus}]]}} {{Type=@{secondary_weapon_type}}}">
                             
                             Secondary Weapon Damage
                         
